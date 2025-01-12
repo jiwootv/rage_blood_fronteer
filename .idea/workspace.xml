@@ -1,12 +1,297 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67dcdbfd-481c-47e8-b6b7-ce60f30bdd14" name="변경" comment="" />
+    <list default="true" id="67dcdbfd-481c-47e8-b6b7-ce60f30bdd14" name="변경" comment="2025.01.12 최초의 커밋">
+      <change afterPath="$PROJECT_DIR$/DOCS.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOCS/Map Editor Menual.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOCS/SAVE MENUAL.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0 (2).zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0 (3).zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0 (4).zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0 백업 _ 2025_01_11.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/1950MapEditor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/TESTFONT.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/TEST_CHATGPT.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/TEst.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/TestInvisablity.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/TestRotate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/TestTrurretBUllet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/Test_turret.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/buildingSystem_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/MAP.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/MapRandomMaker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/TextBoxes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/TilesToMap.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/Turret.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/TurretBulletTest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/asdasdsad.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/attack_alg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/button.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/cousor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/gui.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/gun_shoot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/inventory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/msgbox.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/opening.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/save.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/자동 줄바꿈.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/font/DungGeunMo.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/font/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/Starships.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/Turret/MachineGun/head.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/chr/PlyNormalFront1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/chr/PlyNormalFront2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/chr/PlyNormalFront3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/chr/제목 없음.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/cousor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/gun/M1911.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/gun/M1Garand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/gun/WbRebolber.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/gun/bullet1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/gun/bullet2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/load_btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/save_btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/SPACESHIPS/SpaceTile1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/SPACESHIPS/SpaceTileCorner1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/SPACESHIPS/SpaceTileCorner2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/SPACESHIPS/SpaceTileCorner3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/SPACESHIPS/SpaceTileCorner4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/SPACESHIPS/SpaceTileSide1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/SPACESHIPS/SpaceTileSide2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/SPACESHIPS/SpaceTileSide3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/SPACESHIPS/SpaceTileSide4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/planet/Building/PlasmaTower.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/planet/Building/PlasmaTower/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/planet/Building/PlasmaTower/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/planet/Building/PlasmaTower/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/planet/Building/PlasmaTower/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/planet/Building/PlasmaTower/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/planet/Building/PlasmaTower/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/planet/Building/PlasmaTower/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/planet/Building/PlasmaTower/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/planet/Building/PlasmaTower/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/planet/Building/PlasmaTower/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/planet/Building/PlasmaTower/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/planet/Building/PlasmaTower/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/planet/PlanetFloor1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/planet/PlanetFloor2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/planet/PlanetFloor3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/planet/furnace.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/planet/furnance.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/planet/lava.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/planet/water.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/ui/Crown.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/ui/Notanium2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/ui/UiBar1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/ui/cancel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/ui/notanium1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/제목 없음.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/map/room1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/map/room2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/map/room3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/map/room4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/map/room5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/save/MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/sound/effect/A Piano.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/sound/effect/Connect.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/sound/effect/GlassBroken.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/sound/effect/HeartBeat.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/sound/effect/Rebolber1.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/sound/effect/Reload0.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/sound/effect/Shot0.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/sound/effect/Shot1.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/sound/effect/Sound license" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/sound/effect/Typing.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/disobedience_system.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/popup_prototype.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RBlang/compile_re.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/RBF 맵 에디터 (V 1.0).exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/font/DungGeunMo.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/font/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/img/Starships.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/img/cousor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/img/gun/M1911.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/img/gun/M1Garand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/img/gun/WbRebolber.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/img/gun/bullet1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/img/gun/bullet2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/img/load_btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/img/save_btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/img/tile/SPACESHIPS/SpaceTile1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/img/tile/SPACESHIPS/SpaceTileCorner1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/img/tile/SPACESHIPS/SpaceTileCorner2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/img/tile/SPACESHIPS/SpaceTileCorner3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/img/tile/SPACESHIPS/SpaceTileCorner4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/img/tile/SPACESHIPS/SpaceTileSide1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/img/tile/SPACESHIPS/SpaceTileSide2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/img/tile/SPACESHIPS/SpaceTileSide3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/img/tile/SPACESHIPS/SpaceTileSide4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/img/제목 없음.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/map/room1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/map/room2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/map/room3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/map/room4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/map/room5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/save/MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/sound/effect/A Piano.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/sound/effect/Connect.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/sound/effect/GlassBroken.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/sound/effect/HeartBeat.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/sound/effect/Rebolber1.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/sound/effect/Reload0.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/sound/effect/Shot0.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/sound/effect/Shot1.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/sound/effect/Sound license" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/data/sound/effect/Typing.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/DOCS/Map Editor Menual.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/DOCS/SAVE MENUAL.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0 (2).zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/1950MapEditor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/TESTFONT.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/TEst.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/TestTrurretBUllet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/Test_turret.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/code/MAP.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/code/TextBoxes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/code/Turret.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/code/TurretBulletTest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/code/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/code/asdasdsad.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/code/attack_alg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/code/button.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/code/cousor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/code/gui.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/code/gun_shoot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/code/inventory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/code/msgbox.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/code/opening.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/code/save.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/font/DungGeunMo.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/font/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/Starships.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/chr/PlyNormalFront1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/chr/PlyNormalFront2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/chr/PlyNormalFront3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/chr/제목 없음.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/cousor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/gun/M1911.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/gun/M1Garand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/gun/WbRebolber.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/gun/bullet1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/gun/bullet2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/load_btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/save_btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/SPACESHIPS/SpaceTile1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/SPACESHIPS/SpaceTileCorner1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/SPACESHIPS/SpaceTileCorner2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/SPACESHIPS/SpaceTileCorner3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/SPACESHIPS/SpaceTileCorner4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/SPACESHIPS/SpaceTileSide1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/SPACESHIPS/SpaceTileSide2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/SPACESHIPS/SpaceTileSide3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/tile/SPACESHIPS/SpaceTileSide4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/img/제목 없음.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/map/room1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/map/room2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/map/room3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/map/room4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/map/room5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/save/MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/sound/effect/A Piano.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/sound/effect/Connect.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/sound/effect/GlassBroken.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/sound/effect/HeartBeat.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/sound/effect/Rebolber1.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/sound/effect/Reload0.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/sound/effect/Shot0.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/sound/effect/Shot1.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/sound/effect/Sound license" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/sound/effect/Typing.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/신기방귀.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/RBlang/compile_re.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/RBF 맵 에디터 (V 1.0).exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/font/DungGeunMo.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/font/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/img/Starships.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/img/cousor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/img/gun/M1911.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/img/gun/M1Garand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/img/gun/WbRebolber.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/img/gun/bullet1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/img/gun/bullet2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/img/load_btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/img/save_btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/img/tile/SPACESHIPS/SpaceTile1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/img/tile/SPACESHIPS/SpaceTileCorner1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/img/tile/SPACESHIPS/SpaceTileCorner2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/img/tile/SPACESHIPS/SpaceTileCorner3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/img/tile/SPACESHIPS/SpaceTileCorner4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/img/tile/SPACESHIPS/SpaceTileSide1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/img/tile/SPACESHIPS/SpaceTileSide2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/img/tile/SPACESHIPS/SpaceTileSide3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/img/tile/SPACESHIPS/SpaceTileSide4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/img/제목 없음.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/map/room1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/map/room2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/map/room3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/map/room4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/map/room5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/save/MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/sound/effect/A Piano.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/sound/effect/Connect.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/sound/effect/GlassBroken.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/sound/effect/HeartBeat.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/sound/effect/Rebolber1.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/sound/effect/Reload0.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/sound/effect/Shot0.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/sound/effect/Shot1.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/sound/effect/Sound license" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/output/data/sound/effect/Typing.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/test/SO GOOD ALGO.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/test/TIMETEST.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/test/_TEMP_ Gun systems.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rage_blood_fronteer/test/save_data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/SO GOOD ALGO.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/TIMETEST.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/_TEMP_ Gun systems.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/save_data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unnamed.patch" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "jiwootv"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/jiwootv/rage_blood_fronteer.git",
+    "accountId": "d6348422-5901-4c87-a165-6305ad3a4fc7"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 6
 }]]></component>
@@ -15,6 +300,18 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/PC/PycharmProjects/NEW_rbf"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\PycharmProjects\NEW_rbf" />
+    </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -32,6 +329,19 @@
       <option name="presentableId" value="Default" />
       <updated>1736683029068</updated>
     </task>
+    <task id="LOCAL-00001" summary="2025.01.12 최초의 커밋">
+      <option name="closed" value="true" />
+      <created>1736683320690</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1736683320690</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2025.01.12 최초의 커밋" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025.01.12 최초의 커밋" />
   </component>
 </project>

@@ -4,6 +4,7 @@ import json
 import pygame
 import sys
 #import effect
+
 """
 에셋 종류
 Bricks1: 일반 벽돌
@@ -14,10 +15,14 @@ Bricks3: 금간 벽돌
 DEBUG = False
 print(__name__)
 
-import pygame
 
 class Building(pygame.sprite.Sprite):
     def __init__(self, image_path, position):
+        """
+        이거 아직은 안 쓰는 클래스라 뭐 하는 건지 모르겠음
+        :param image_path: image_path 지정
+        :param position: (안 씀)
+        """
         super().__init__()
         self.image = pygame.image.load(image_path).convert_alpha()
         self.rect = self.image.get_rect()
@@ -25,9 +30,15 @@ class Building(pygame.sprite.Sprite):
 
 class Map:
     def __init__(self, screen):
+        """
+        Map 클래스,
+        :param screen: pygame의 스크린
+        """
+
+        # tile, lava, water, furnance 같은 타일의 이미지 로드
         self.assets = \
             {
-                "SpaceTile1":pygame.image.load("data/img/tile/SPACESHIPS/SpaceTile1.png"),
+                "SpaceTile1": pygame.image.load("data/img/tile/SPACESHIPS/SpaceTile1.png"),
                 "SpaceTileCorner1": pygame.image.load("data/img/tile/SPACESHIPS/SpaceTileCorner1.png"),
                 "SpaceTileCorner2": pygame.image.load("data/img/tile/SPACESHIPS/SpaceTileCorner2.png"),
                 "SpaceTileCorner3": pygame.image.load("data/img/tile/SPACESHIPS/SpaceTileCorner3.png"),
@@ -68,41 +79,54 @@ class Map:
         self.color = (255, 0, 0)
         self.tileEvent = []
 
-        # Map Count ( 맵 개수 ) 지정
-        self.MAP_COUNT = 5
+        # map 설정
+        self.map = []
+        # 아 왜 0번 방 없음
+        self.map.append(None)
         with open("data/map/room1.json") as f:
-            self.map1 = json.load(f)
+            self.map.append(json.load(f))
         with open("data/map/room2.json") as f:
-            self.map2 = json.load(f)
+            self.map.append(json.load(f))
         with open("data/map/room3.json") as f:
-            self.map3 = json.load(f)
+            self.map.append(json.load(f))
         with open("data/map/room4.json") as f:
-            self.map4 = json.load(f)
+            self.map.append(json.load(f))
         with open("data/map/room5.json") as f:
-            self.map5 = json.load(f)
+            self.map.append(json.load(f))
+
+        self.MAP_COUNT = len(self.map) - 1
 
     def get_key(self, val, dict):
-
+        """
+        리스트의 키를 가져옵니다.
+        :param val: 값
+        :param dict: 리스트
+        :return: 리스트에 있는 값에 해당하는 키 (없을 경우 None을 반환함)
+        """
         for key, value in dict.items():
             if val == value:
                 return key
 
-        return "key doesn't exist"
+        return None
 
     def _load(self, mapnumber):
+        """
+        저장된 맵 json 파일을 불러와 mapNumber, mapW, mapH, tile_list, tile_hitboxes를 정의합니다.
+        :param mapnumber: 맵 번호
+        """
         self.tile_list = []
         self.tile_hitboxes = []
         with open(f"room{mapnumber}.json") as f:
             self.tempMap = json.load(f)
         if DEBUG:
-            print("map size: " + str(eval('self.map%d["size"]' % mapnumber)))
-        self.mapW, self.mapH = eval('self.map%d["size"]' % mapnumber)
+            print("map size: " + str(self.map[mapnumber]["size"]))
+        self.mapW, self.mapH = self.map[mapnumber]["size"]
         self.mapNumber = mapnumber
 
         for w in range(1, self.mapW + 2):
             for h in range(1, self.mapH + 2):
                 try:
-                    p = eval(f"self.map{mapnumber}[\"tilemap\"][f\"{w};{h}\"]")
+                    p = self.map[mapnumber]["tilemap"][f"{w};{h}"]
                     self.tile_list.append(p)
                     if DEBUG:
                         print(f"pos:{w};{h} | " + "type:" + p["type"] + " | img: " + p["img"])
@@ -115,8 +139,17 @@ class Map:
         if DEBUG:
             print(type(self.mapH))
 
-
     def load_to_list(self, value):
+        """
+        value에서 가져온 맵 json을 이 클래스의 list들로 변환합니다.
+        변하는 리스트는 다음과 같습니다:
+            tile_hitboxes ([]으로 바뀜)
+            tile_list (json 파일에 있는 타일을 여기에 넣음)
+            mapW, mapH
+        :param value: json 파일에서 가져온 리스트를 바로 넣습니다.
+        예시: load_to_list(json.load(open("data/map/room1.json")))
+        (근데 걍 _load 쓰면 되는거 아닌가)
+        """
         self.tile_hitboxes = []
         if DEBUG:
             print(value)
@@ -130,124 +163,157 @@ class Map:
                     # p = eval(f"self.map{mapnumber}[\"tilemap\"][f\"{w};{h}\"]")
                     p = value["tilemap"][f"{w};{h}"]
                     self.tile_list.append(p)
-                    if DEBUG: print(f"pos:{w};{h} | " + "type:" + p["type"] + " | img: " + p["img"])
+                    if DEBUG:
+                        print(f"pos:{w};{h} | " + "type:" + p["type"] + " | img: " + p["img"])
                 except KeyError:
                     pass
-                    if DEBUG: print("존재하지 않는 칸")
+                    if DEBUG:
+                        print("존재하지 않는 칸")
         if DEBUG:
             print("map size:", self.mapW, self.mapH)
             print(type(self.mapH))
 
     def draw_set(self):
-        self.move_pos = list(map(lambda x: x * 30, self.map1["startpos"]))
+        """
+        draw를 하기에 앞써서 쓰는 코드로 추정
+        """
+        # self.move_pos를 self.map[1]["startpos"] (0, -1) 에 30을 곱해 넣습니다. (0, -30)
+        self.move_pos = list(map(lambda x: x * 30, self.map[1]["startpos"]))
+
+        # new_tile_list에 타일 크기가 적용된 사진을 넣습니다.
         self.new_tile_list = []
-        # print(self.move_pos)
         for i in range(len(self.tile_list)):
             self.new_tile_list.append(
                 pygame.transform.scale(self.assets[self.tile_list[i]['img']], (self.tilesize, self.tilesize)))
 
+        # tile_hitboxes에 tile_list만큼 ""를 넣습니다 (초기화)
         for _ in self.tile_list:
             self.tile_hitboxes.append("")
-        # 2871031
-        # 칸 크기 조정
+
+        # 모든 assets의 키들 돌아가면서
+        # 키가 "Player"로 시작하지 않으면
+        # assets[key]의 크기를 타일 크기로 지정한다.
         for i in self.assets.values():
             r = self.get_key(i, self.assets)
-            if DEBUG: print(r)
+            if DEBUG:
+                print(r)
             print(r[:6])
-            if r[:6] != "Player": self.assets[r] = pygame.transform.scale(self.assets[r], (self.tilesize, self.tilesize))
-
+            if r[:6] != "Player":
+                self.assets[r] = pygame.transform.scale(self.assets[r], (self.tilesize, self.tilesize))
 
     def var_set(self, type, result):
-        eval(f"self.{type} = {result}")
+        """
+        self.type를 result로 정합니다.
+        (왜 만든거임)
+        :param type: 변수
+        :param result: 값
+        """
+        setattr(self, type, result)
 
     def draw(self):
-        json_map1 = self.tile_list
+        """
+        그립니다.
+        (당연하게도)
+        """
         if len(self.tile_list) != 0:
-
-            for i in range(len(self.new_tile_list)):
-                # print(i)
-                try:
-                    x = json_map1[i]["pos"][0] * self.tilesize - self.tilesize + self.move_pos[0]
-                    y = json_map1[i]["pos"][1] * self.tilesize - self.tilesize + self.move_pos[1]
-                    if json_map1[i]["type"] == "wall": self.tile_hitboxes[i] = (
-                        pygame.Rect(x, y, self.tilesize, self.tilesize))
-                except IndexError:
-                    pass
-            self.p_hitbox = pygame.Rect(287, 215, 66, 99)
-
+            # tile_list에서 type가 wall이면 tile_hitboxes를 설정합니다.
+            # x = tile.x * tilesize - tilesize + movepos.x
+            # y = tile.y * tilesize - tilesize + movepos.y
             for i in range(len(self.tile_list)):
                 try:
-                    json_map1 = self.tile_list
-                    # print(len(self.tile_list), len(self.new_tile_list))
-                    # print(i, len(m), json_map1)
-                    # try:
-                    self.root.blit(self.assets[json_map1[i]["img"]],
-                                   (json_map1[i]["pos"][0] * self.tilesize - self.tilesize + self.move_pos[0],
-                                    json_map1[i]["pos"][1] * self.tilesize - self.tilesize + self.move_pos[1]))
+                    x = self.tile_list[i]["pos"][0] * self.tilesize - self.tilesize + self.move_pos[0]
+                    y = self.tile_list[i]["pos"][1] * self.tilesize - self.tilesize + self.move_pos[1]
+                    if self.tile_list[i]["type"] == "wall":
+                        self.tile_hitboxes[i] = pygame.Rect(x, y, self.tilesize, self.tilesize)
+                except IndexError:
+                    pass
+
+            # 플레이어의 히트박스를 설정합니다...? (안 씀)
+            self.p_hitbox = pygame.Rect(287, 215, 66, 99)
+
+            # tile을 draw합니다.
+            for tile in self.tile_list:
+                try:
+                    self.root.blit(self.assets[tile["img"]],
+                                   (tile["pos"][0] * self.tilesize - self.tilesize + self.move_pos[0],
+                                    tile["pos"][1] * self.tilesize - self.tilesize + self.move_pos[1]))
 
                 except IndexError:
                     pass
-            # except IndexError: print("인덱스 에러 발생")
 
             if DEBUG:
                 pygame.draw.rect(self.root, self.color, self.p_hitbox)
-            #pygame.draw.rect(self.root, self.color, self.tile_hitboxes[0])
-
-
 
     def brickPassSet(self, result):
+        """
+        brickPass를 result로 설정합니다.
+        왜 쓰는건지 아직 모름...
+        :param result: 값 (bool)
+        """
         self.brickPass = result
 
     def mapGet(self, mapNumber):
-        if DEBUG: print("TEST", str(eval('self.map%d' % mapNumber)))
-        return eval('self.map%d' % int(mapNumber))
+        """
+        map을 반환합니다.
+        :param mapNumber: 맵 번호
+        :return: 번호에 해당하는 맵
+        """
+        if DEBUG:
+            print("TEST", str(self.map[mapNumber]))
+        return self.map[int(mapNumber)]
 
     # def map_dataEdit(self, mapNumber):
 
     def event(self):
-        #pygame.draw.rect(self.root, (200, 0, 0), self.p_hitbox)
         self.TileHitboxIR = []
         self.tileEvent = []
-        for i in range(self.tile_list.__len__()): self.TileHitboxIR.append("None")
+        # TileHitboxIR 사이즈 지정 (tile_list의 사이즈 동기화)
+        for i in range(self.tile_list.__len__()):
+            self.TileHitboxIR.append("None")
         # IRID 지정
-        #(self.tile_list.__len__(), self.tile_hitboxes.__len__())
+        # (TileHitboxIR에 타일 범위의 Rect를 설정)
         for i in range(len(self.tile_list)):
             x = self.tile_list[i]["pos"][0] * self.tilesize - self.tilesize + self.move_pos[0]
             y = self.tile_list[i]["pos"][1] * self.tilesize - self.tilesize + self.move_pos[1]
-            self.TileHitboxIR[i] = (pygame.Rect(x, y, self.tilesize, self.tilesize))
+            self.TileHitboxIR[i] = pygame.Rect(x, y, self.tilesize, self.tilesize)
 
         # IRID 설정
+        # ()
         for tileIR in self.TileHitboxIR:
 
             if self.p_hitbox.colliderect(tileIR):
                 self.tileEvent.append(self.tile_list[self.TileHitboxIR.index(tileIR)]["IRID"])
 
         # 충돌 / 이동감지
-
-        self.collides = [0, 0, 0, 0]
-        self.movetype = [0, 0, 0, 0]
+        # (이동은 movetile이라는 list를 만들어서 그걸로 이벤트 처리)
+        collides = [0, 0, 0, 0]
+        movetype = [0, 0, 0, 0]
         P = pygame.key.get_pressed()
+        if P[pygame.K_w]:
+            movetype[0] = 1
+        if P[pygame.K_s]:
+            movetype[1] = 1
+        if P[pygame.K_d]:
+            movetype[2] = 1
+        if P[pygame.K_a]:
+            movetype[3] = 1
 
-        if P[pygame.K_w]: self.movetype[0] = 1
-        if P[pygame.K_s]: self.movetype[1] = 1
-        if P[pygame.K_d]: self.movetype[2] = 1
-        if P[pygame.K_a]: self.movetype[3] = 1
-
-        self.collide = False
+        """
+        # 이거 아직 안쓰는 듯
         for i in [0, 1, 2, 3]:  # 총 4개의 방향 이동 감지
             a, b = 287, 215
             next_x, next_y = 66, 99
-            if self.movetype[i]:  # 만약 i번째 키가 눌려있는가:
+            if movetype[i]:  # 만약 i번째 키가 눌려있는가:
                 c = 0
                 if i == 0:  # 만약 위로 이동했을 때:
                     c += 1
                     b -= self.move_speed
                     next_y += self.move_speed
-                if i == 1:
+                if i == 1: # 아래로
                     c += 1
                     b += self.move_speed
-                    next_y += self.move_speed
-                if i == 3:
+                    next_y -= self.move_speed
+                if i == 3: # 오른족
                     c += 1
                     a -= self.move_speed
                 if i == 2:
@@ -258,24 +324,29 @@ class Map:
                     pygame.draw.rect(self.root, self.color, self.p_nexthitbox)
                 for tile_rect in self.tile_hitboxes:
                     if tile_rect != '' and not self.brickPass:
-                        #(tile_rect)
                         if self.p_nexthitbox.colliderect(tile_rect):
-                            self.collides[i] = 1
+                            collides[i] = 1
                             break
+        """
 
-        if self.movetype[0] == 1 and not self.collides[0]:
+        if movetype[0] == 1 and not collides[0]:
             self.move_pos[1] += self.move_speed
 
-        if self.movetype[1] == 1 and not self.collides[1]:
+        if movetype[1] == 1 and not collides[1]:
             self.move_pos[1] -= self.move_speed
 
-        if self.movetype[2] == 1 and not self.collides[2]:
+        if movetype[2] == 1 and not collides[2]:
             self.move_pos[0] -= self.move_speed
 
-        if self.movetype[3] == 1 and not self.collides[3]:
+        if movetype[3] == 1 and not collides[3]:
             self.move_pos[0] += self.move_speed
-        return self.movetype
+        return movetype
+
     def moveposGet(self):
+        """
+        move_pos (카메라 위치)를 리턴합니다.
+        :return: self.move_pos
+        """
         return self.move_pos
 
 
@@ -286,6 +357,8 @@ if __name__ == "__main__":
     Clock = pygame.time.Clock()
     ROOMNUMBER = 1
     M._load(ROOMNUMBER)
+
+
     def main():
         a = 1
         global ROOMNUMBER
@@ -294,7 +367,6 @@ if __name__ == "__main__":
             Screen.fill(0)
             Mtype = M.event()
 
-
             for i in range(4):
                 if Mtype[i] == 1:
                     a = i
@@ -302,8 +374,7 @@ if __name__ == "__main__":
 
             M.draw()
 
-
-            Screen.blit(M.assets[f"Player{a+1}"], (287, 215))
+            Screen.blit(M.assets[f"Player{a + 1}"], (287, 215))
             pygame.display.update()
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -315,4 +386,6 @@ if __name__ == "__main__":
                     M._load(ROOMNUMBER)
                     M.draw_set()
             Clock.tick(60)
+
+
     main()

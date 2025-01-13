@@ -1,17 +1,10 @@
 import pygame, sys
 
-screen = pygame.display.set_mode((640, 480))
-clock = pygame.time.Clock()
-pygame.init()
-pygame.mixer.init()
 
 def draw_rect_alpha(screen, color, rect):
     shape_surf = pygame.Surface(pygame.Rect(rect).size, pygame.SRCALPHA)
     pygame.draw.rect(shape_surf, color, shape_surf.get_rect())
     screen.blit(shape_surf, rect)
-
-
-# 글자 단위 줄바꿈 함수
 
 
 class PopUp:
@@ -56,8 +49,8 @@ class PopUp:
     def draw(self):
         if self.popup_onscreen:
             draw_rect_alpha(self.screen, (255, 255, 255, 138), self.rect)
+            # 그냥 볼드체 없애는게 좋을 듯
             font = pygame.font.Font("data/font/DungGeunMo.otf", 22)
-            font.bold = True
             text = font.render(self.text[0], 1, (255, 255, 255))
             self.screen.blit(text, (105, 155))
 
@@ -73,17 +66,23 @@ class PopUp:
             if pygame.mouse.get_pressed()[0]:
                 self.popup_onscreen = False
 
-P = PopUp(screen, ["불복종이 증가했습니다!", "불복종의 증가로 인해 노타민들이 일을 하지 않습니다! 이는 작업효율 감소로 이어집니다."], image=None)
 
-while True:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
+if __name__ == "__main__":
+    screen = pygame.display.set_mode((640, 480))
+    clock = pygame.time.Clock()
+    pygame.init()
+    pygame.mixer.init()
 
-    screen.fill((0, 0, 0))
-    P.draw()
-    P.event()
-    pygame.display.update()
-    clock.tick(60)
+    P = PopUp(screen, ["불복종이 증가했습니다!", "불복종의 증가로 인해 노타민들이 일을 하지 않습니다! 이는 작업효율 감소로 이어집니다."], image=None)
 
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+
+        screen.fill((0, 0, 0))
+        P.draw()
+        P.event()
+        pygame.display.update()
+        clock.tick(60)

@@ -7,6 +7,10 @@ pygame.init()
 
 class Opening:
     def __init__(self, screen):
+        """
+        main.py에서 메뉴를 담당하는 클래스
+        :param screen: pygame의 스크린
+        """
         self.screen_x, self.screen_y = 640, 480
         self.screen = screen
         self.clock = pygame.time.Clock()
@@ -19,6 +23,9 @@ class Opening:
         self.char_alphas = [[0] * len(t) for t in self.texts]  # Initialize alphas for each character in each text
 
     def display_text(self):
+        """
+        텍스트를 보여줍니다. (그라데이션으로)
+        """
         current_time = time.time()
         if current_time - self.last_update >= self.update_interval:
             for i, text in enumerate(self.texts):
@@ -45,4 +52,7 @@ class Opening:
                 x_offset += char_surface.get_width()
 
     def run(self):
+        """
+        실행 함수
+        """
         self.display_text()

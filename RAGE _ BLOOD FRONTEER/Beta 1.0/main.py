@@ -28,6 +28,10 @@ class Game:
         self.cousor_class_opening = cousor.Cousor(self.screen, 8, (140, 115), (120, 145), (58, 175), (58, 205))
         self.opening = opening.Opening(self.screen)
         self.gbar = GuiSet(self.screen)
+        self.msgbox = msgbox.MsgBox(self.screen, ["2972년 11월 21일, 김두한이 죽은지 1000년이 지났을때.", "지구는 이미 생활하기 힘들 정도로 파괴되었다.",
+                                                  "그렇게 온 기술을 모아 지구에서는 우주선을 만들어 똑똑하고,", "유능한 일부의 개척민들과",
+                                                  "수천 개의 배아들을 실었다. ", "그 우주선의 이름은 YJ-P1", "YJ-P1은 그렇게 인류의 새 개척지를 찾기 위한",
+                                                  "아주 길고도 긴 여행을 시작하게 된다."], 10, 0, 20)
 
         # 0 : 기본값 = 오프닝
         self.now_screen = 0
@@ -35,8 +39,9 @@ class Game:
     def run(self):
         while True:
             self.now_time = pygame.time.get_ticks()
+            events = pygame.event.get()  # 이벤트를 한 번만 가져옴
 
-            for event in pygame.event.get():
+            for event in events:
                 if event.type == pygame.QUIT or msgbox.IS_QUIT:
                     pygame.quit()
                     sys.exit()
@@ -48,17 +53,16 @@ class Game:
                             self.cousor_class_opening.cousor_down()
                         if event.key == pygame.K_RETURN:
                             if self.cousor_class_opening.get_cousor_index() == 0:
-                                msgbox.MsgBox(self.screen,
-                                              ["2972년 11월 21일, 김두한이 죽은지 1000년이 지났을때.", "지구는 이미 생활하기 힘들 정도로 파괴되었다.",
-                                               "그렇게 온 기술을 모아 지구에서는 우주선을 만들어 똑똑하고,", "유능한 일부의 개척민들과", "수천 개의 배아들을 실었다. ",
-                                               "그 우주선의 이름은 YJ-P1", "YJ-P1은 그렇게 인류의 새 개척지를 찾기 위한", "아주 길고도 긴 여행을 시작하게 된다."],
-                                              10, 0, 20)
-                                self.now_screen += self.cousor_class_opening.get_cousor_index() + 1
+                                self.now_screen = 1
             if self.now_screen == 0:
                 if self.now_time > 2000:
                     self.cousor_class_opening.draw()
                 self.opening.run()
             if self.now_screen == 1:
+                self.msgbox.run(events)
+                if not self.msgbox.is_running():
+                    self.now_screen = 2
+            if self.now_screen == 2:
                 self.gbar.gui_set()
             pygame.display.update()
             self.screen.fill(0)

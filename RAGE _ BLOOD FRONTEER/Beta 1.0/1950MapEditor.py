@@ -246,7 +246,7 @@ class Main:
             self.text(30, "현재 좌표: %d;%d" % (self.pos_x + 1, self.pos_y + 1), (255, 255, 255), 300, 500)
             try:
                 self.text(30,
-                          "현재 타일:" + self.now_map[self.file_index]["tilemap"][f"{self.pos_x - 1};{self.pos_y - 1}"][
+                          "현재 타일:" + self.now_map[self.file_index]["tilemap"][f"{self.pos_x + 1};{self.pos_y + 1}"][
                               "img"], (255, 255, 255), 300, 550)
             except KeyError:
                 self.text(30, "현재 타일: 없음", (255, 255, 255), 300, 550)

@@ -21,6 +21,7 @@ class Opening:
         self.last_update = time.time()
         self.update_interval = 0.25  # 250 milliseconds
         self.char_alphas = [[0] * len(t) for t in self.texts]  # Initialize alphas for each character in each text
+        self.text_len = 0
 
     def display_text(self):
         """
@@ -33,6 +34,7 @@ class Opening:
                     self.displayed_texts[i] += text[self.char_indices[i]]
                     self.char_indices[i] += 1
             self.last_update = current_time
+            self.text_len += 1
 
         # Update alpha values
         for i in range(len(self.texts)):
@@ -56,3 +58,6 @@ class Opening:
         실행 함수
         """
         self.display_text()
+
+    def get_text_len(self):
+        return self.text_len

@@ -1,10 +1,11 @@
 import pygame
 import sys
-import time
+import code.MAP as game_map
 import code.cousor as cousor
 import code.opening as opening
 import code.msgbox as msgbox
 import code.gui as gui
+from code.InputField import InputField
 
 pygame.init()
 
@@ -35,6 +36,9 @@ class Game:
 
         # 0 : 기본값 = 오프닝
         self.now_screen = 0
+        self.Map_c = game_map.Map(self.screen)
+        self.input_field = InputField(self.screen, (120, 250), (400, 50), 40)
+        self.name = ""
 
     def run(self):
         while True:
@@ -46,27 +50,49 @@ class Game:
                     pygame.quit()
                     sys.exit()
                 if event.type == pygame.KEYDOWN:
-                    if self.now_screen == 0 and self.now_time > 2000:
+                    if self.now_screen == 1 and self.opening.get_text_len() >= 6:
                         if event.key == pygame.K_UP:
                             self.cousor_class_opening.cousor_up()
                         if event.key == pygame.K_DOWN:
                             self.cousor_class_opening.cousor_down()
                         if event.key == pygame.K_RETURN:
                             if self.cousor_class_opening.get_cousor_index() == 0:
-                                self.now_screen = 1
+                                self.now_screen = 2
             if self.now_screen == 0:
-                if self.now_time > 2000:
-                    self.cousor_class_opening.draw()
-                self.opening.run()
+                self.say_your_name(self.screen, events)
             if self.now_screen == 1:
+                self.opening.run()
+                if self.opening.get_text_len() >= 6:
+                    self.cousor_class_opening.draw()
+            if self.now_screen == 2:
                 self.msgbox.run(events)
                 if not self.msgbox.is_running():
-                    self.now_screen = 2
-            if self.now_screen == 2:
-                self.gbar.gui_set()
+                    self.now_screen = 3
+                    self.Map_c.load_to_list(self.Map_c.mapGet(1))
+                    self.Map_c.draw_set()
+                    self.Map_c.brickPassSet(1)
+            if self.now_screen == 3:
+                self.main_screen(events)
             pygame.display.update()
             self.screen.fill(0)
             self.clock.tick(60)
+
+    def main_screen(self, events):
+        self.Map_c.draw()
+        self.Map_c.event()
+
+        self.gbar.gui_set()
+
+    def say_your_name(self, screen, events):
+        font = pygame.font.Font("data/font/DungGeunMo.otf", 45)
+        text = font.render("당신의 이름은 무엇입니까?", 1, (255, 255, 255, 255))
+        screen.blit(text, (320 - font.size("당신의 이름은 무엇입니까?")[0] / 2, 150))
+
+        self.input_field.event(events)
+        self.input_field.draw()
+        if self.input_field.is_completed():
+            self.now_screen = 1
+            self.name = self.input_field.get_text()
 
 
 G = Game()

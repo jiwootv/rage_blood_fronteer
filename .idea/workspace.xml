@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67dcdbfd-481c-47e8-b6b7-ce60f30bdd14" name="변경" comment="2025.01.13&#10;주석 달기, 코드 최적화&#10;(0112_1.mp4, buildingSystem_test.py, videoPlay.py 제외)">
-      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/video/0112_1.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/videoPlay.py" afterDir="false" />
+    <list default="true" id="67dcdbfd-481c-47e8-b6b7-ce60f30bdd14" name="변경" comment="2025.1.16&#10;msgbox.py 프레임 유지 수정&#10;1950MapEditor.py에서 마우스에 있는 타일과 화변 보조 ui에서 나오는 타일이 다른 버그를 수정">
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/InputField.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/font/BestTen-CRT.otf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/1950MapEditor.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/1950MapEditor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/buildingSystem_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/buildingSystem_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/MAP.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/MAP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/opening.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/opening.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,31 +50,64 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.1950MapEditor.executor&quot;: &quot;Run&quot;,
-    &quot;Python.MAP.executor&quot;: &quot;Run&quot;,
-    &quot;Python.buildingSystem_test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.cousor.executor&quot;: &quot;Run&quot;,
-    &quot;Python.gui.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.msgbox.executor&quot;: &quot;Run&quot;,
-    &quot;Python.popup_prototype.executor&quot;: &quot;Run&quot;,
-    &quot;Python.videoPlay.executor&quot;: &quot;Run&quot;,
-    &quot;Python.자동 줄바꿈.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/chris/my_python/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/video&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.1950MapEditor.executor": "Run",
+    "Python.InputField.executor": "Run",
+    "Python.MAP.executor": "Run",
+    "Python.buildingSystem_test.executor": "Run",
+    "Python.cousor.executor": "Run",
+    "Python.get_name_ui.executor": "Run",
+    "Python.gui.executor": "Run",
+    "Python.hangulInputBox.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.msgbox.executor": "Run",
+    "Python.popup_prototype.executor": "Run",
+    "Python.videoPlay.executor": "Run",
+    "Python.자동 줄바꿈.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/chris/my_python/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/font"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\chris\my_python\rage_blood_fronteer\RAGE _ BLOOD FRONTEER\Beta 1.0\data\font" />
       <recent name="D:\chris\my_python\rage_blood_fronteer\RAGE _ BLOOD FRONTEER\Beta 1.0\data\video" />
       <recent name="C:\Users\PC\PycharmProjects\NEW_rbf" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\chris\my_python\rage_blood_fronteer\RAGE _ BLOOD FRONTEER\Beta 1.0\data\video" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="InputField" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="NEW_rbf" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/InputField.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.InputField" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -108,12 +142,32 @@
       <option name="project" value="LOCAL" />
       <updated>1736772757530</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="2025.1.16&#10;msgbox.py 프레임 유지 수정&#10;1950MapEditor.py에서 마우스에 있는 타일과 화변 보조 ui에서 나오는 타일이 다른 버그를 수정">
+      <option name="closed" value="true" />
+      <created>1737033589510</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1737033589510</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2025.01.12 최초의 커밋" />
     <MESSAGE value="2025.01.13&#10;주석 달기, 코드 최적화&#10;(0112_1.mp4, buildingSystem_test.py, videoPlay.py 제외)" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025.01.13&#10;주석 달기, 코드 최적화&#10;(0112_1.mp4, buildingSystem_test.py, videoPlay.py 제외)" />
+    <MESSAGE value="2025.1.16&#10;msgbox.py 프레임 유지 수정&#10;1950MapEditor.py에서 마우스에 있는 타일과 화변 보조 ui에서 나오는 타일이 다른 버그를 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025.1.16&#10;msgbox.py 프레임 유지 수정&#10;1950MapEditor.py에서 마우스에 있는 타일과 화변 보조 ui에서 나오는 타일이 다른 버그를 수정" />
   </component>
 </project>

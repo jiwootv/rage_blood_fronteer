@@ -288,14 +288,14 @@ class Map:
         # (이동은 movetile이라는 list를 만들어서 그걸로 이벤트 처리)
         collides = [0, 0, 0, 0]
         movetype = [0, 0, 0, 0]
-        P = pygame.key.get_pressed()
-        if P[pygame.K_w]:
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_w]:
             movetype[0] = 1
-        if P[pygame.K_s]:
+        if keys[pygame.K_s]:
             movetype[1] = 1
-        if P[pygame.K_d]:
+        if keys[pygame.K_d]:
             movetype[2] = 1
-        if P[pygame.K_a]:
+        if keys[pygame.K_a]:
             movetype[3] = 1
 
         """

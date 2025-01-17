@@ -6,6 +6,7 @@ import code.opening as opening
 import code.msgbox as msgbox
 import code.gui as gui
 from code.InputField import InputField
+from code.auto_line import draw_text_with_letter_wrapping
 
 pygame.init()
 
@@ -18,6 +19,51 @@ class GuiSet:
         self.gbar = gui.WidgetBar(100, 50, 150, 25, 100, "data/img/ui/notanium1.png", "right", (0, 0, 255),
                                   current_value=0)
         self.gbar.draw(screen=self.screen)
+
+
+class Button:
+    def __init__(self, x, y, width, height, color, outline=None, text='', text_color=(0, 0, 0), font=None, img=''):
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+        self.color = color
+        self.outline = outline
+        self.text = text
+        self.font = font if font is not None else pygame.font.Font(None, 30)
+        self.img = img
+        self.text_color = text_color
+
+    def draw(self, screen):
+        # 버튼에 외곽선이 있을 경우 그리기
+        if self.outline:
+            pygame.draw.rect(screen, self.outline, (self.x - 2, self.y - 2, self.width + 4, self.height + 4), 0)
+
+        # 버튼 그리기
+        pygame.draw.rect(screen, self.color, (self.x, self.y, self.width, self.height), 0)
+
+        # 버튼에 텍스트가 있을 경우 텍스트 그리기
+        if self.text != '':
+            text = self.font.render(self.text, 1, self.text_color)
+            screen.blit(text, (
+                self.x + (self.width / 2 - text.get_width() / 2),
+                self.y + (self.height / 2 - text.get_height() / 2)
+            ))
+
+        # 버튼에 이미지가 있을 경우 이미지 그리기
+        if self.img != '':
+            img = pygame.image.load(self.img)
+            screen.blit(img, (
+                self.x + (self.width / 2 - img.get_width() / 2),
+                self.y + (self.height / 2 - img.get_height() / 2)
+            ))
+
+    def is_over(self, pos):
+        # pos는 마우스의 (x, y) 좌표
+        if self.x < pos[0] < self.x + self.width:
+            if self.y < pos[1] < self.y + self.height:
+                return True
+        return False
 
 
 class Game:
@@ -39,6 +85,12 @@ class Game:
         self.Map_c = game_map.Map(self.screen)
         self.input_field = InputField(self.screen, (120, 250), (400, 50), 40)
         self.name = ""
+        font = pygame.font.Font("data/font/font1.otf", 30)
+        self.name_button = Button(170, 350, 300, 60, (255, 255, 255), text="확인", font=font)
+        self.name_yes_button = Button(140, 280, 150, 60, (255, 255, 255), text="네", font=font)
+        self.name_no_button = Button(350, 280, 150, 60, (255, 255, 255), text="아니요", font=font)
+
+        pygame.display.set_caption("RAGE: BLOOD FRONTEER")
 
     def run(self):
         while True:
@@ -84,15 +136,64 @@ class Game:
         self.gbar.gui_set()
 
     def say_your_name(self, screen, events):
-        font = pygame.font.Font("data/font/DungGeunMo.otf", 45)
-        text = font.render("당신의 이름은 무엇입니까?", 1, (255, 255, 255, 255))
-        screen.blit(text, (320 - font.size("당신의 이름은 무엇입니까?")[0] / 2, 150))
+        font = pygame.font.Font("data/font/font1.otf", 40)
+        if font.size(self.input_field.get_text())[0] > 400:
+            text = "잠시만요, 당신 이름이 이 텍스트 박스 안에 다 안 들어가요?"
+        else:
+            text = "당신의 이름은 무엇입니까?"
+        draw_text_with_letter_wrapping(screen, text, font, (255, 255, 255),
+                                       0, 100, 640, "center")
 
         self.input_field.event(events)
         self.input_field.draw()
+        if self.name_button.is_over(pygame.mouse.get_pos()):
+            self.name_button.color = (127, 127, 127)
+            if pygame.mouse.get_pressed()[0]:
+                self.input_field.set_state(True)
+        else:
+            self.name_button.color = (255, 255, 255)
+        self.name_button.draw(self.screen)
         if self.input_field.is_completed():
-            self.now_screen = 1
             self.name = self.input_field.get_text()
+            pygame.draw.rect(screen, (255, 255, 255), (98, 98, 444, 284), 0)
+            pygame.draw.rect(screen, (0, 0, 0), (100, 100, 440, 280), 0)
+            font = pygame.font.Font("data/font/font1.otf", 30)
+
+            # 이름 이스터애그들
+            creator_name = ["qwru0905"]
+            if font.size(self.input_field.get_text())[0] > 400:
+                text = "와... 엄청 긴 이름을 가졌군요?"
+            elif len(self.input_field.get_text()) == 1:
+                text = "와... 엄청 짧은 이름을 가졌군요?"
+            elif len(self.input_field.get_text()) == 0:
+                text = "와... 아무것도 안 쓰셨네요?"
+            elif self.input_field.get_text() in creator_name:
+                text = "오, 당신 이름이 저희 개발자 중 한 분이랑 겹치네요?"
+            else:
+                text = f"당신의 이름이 {self.name}이 맞습니까?"
+            draw_text_with_letter_wrapping(screen, text, font, (255, 255, 255),
+                                           0, 150, 400, "center")
+
+            self.name_yes_button.draw(screen)
+            self.name_no_button.draw(screen)
+            for event in events:
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_RETURN:
+                        self.now_screen = 1
+                    if event.key == pygame.K_ESCAPE:
+                        self.input_field.set_state(False)
+            if self.name_yes_button.is_over(pygame.mouse.get_pos()):
+                self.name_yes_button.color = (127, 127, 127)
+                if pygame.mouse.get_pressed()[0]:
+                    self.now_screen = 1
+            else:
+                self.name_yes_button.color = (255, 255, 255)
+            if self.name_no_button.is_over(pygame.mouse.get_pos()):
+                self.name_no_button.color = (127, 127, 127)
+                if pygame.mouse.get_pressed()[0]:
+                    self.input_field.set_state(False)
+            else:
+                self.name_no_button.color = (255, 255, 255)
 
 
 G = Game()

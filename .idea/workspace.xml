@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67dcdbfd-481c-47e8-b6b7-ce60f30bdd14" name="변경" comment="2025.1.16&#10;msgbox.py 프레임 유지 수정&#10;1950MapEditor.py에서 마우스에 있는 타일과 화변 보조 ui에서 나오는 타일이 다른 버그를 수정">
-      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/InputField.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/font/BestTen-CRT.otf" afterDir="false" />
+    <list default="true" id="67dcdbfd-481c-47e8-b6b7-ce60f30bdd14" name="변경" comment="2025.1.17&#10;main.py 대거 수정&#10;이름 물어보는 창 만듬&#10;메인 화면에서 맵 볼수 있게 만듬">
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/auto_line.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/font/font1.otf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/MAP.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/MAP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/opening.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/opening.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/InputField.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/InputField.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/자동 줄바꿈.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737033589510</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="2025.1.17&#10;main.py 대거 수정&#10;이름 물어보는 창 만듬&#10;메인 화면에서 맵 볼수 있게 만듬">
+      <option name="closed" value="true" />
+      <created>1737093052167</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1737093052167</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -168,6 +177,7 @@
     <MESSAGE value="2025.01.12 최초의 커밋" />
     <MESSAGE value="2025.01.13&#10;주석 달기, 코드 최적화&#10;(0112_1.mp4, buildingSystem_test.py, videoPlay.py 제외)" />
     <MESSAGE value="2025.1.16&#10;msgbox.py 프레임 유지 수정&#10;1950MapEditor.py에서 마우스에 있는 타일과 화변 보조 ui에서 나오는 타일이 다른 버그를 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025.1.16&#10;msgbox.py 프레임 유지 수정&#10;1950MapEditor.py에서 마우스에 있는 타일과 화변 보조 ui에서 나오는 타일이 다른 버그를 수정" />
+    <MESSAGE value="2025.1.17&#10;main.py 대거 수정&#10;이름 물어보는 창 만듬&#10;메인 화면에서 맵 볼수 있게 만듬" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025.1.17&#10;main.py 대거 수정&#10;이름 물어보는 창 만듬&#10;메인 화면에서 맵 볼수 있게 만듬" />
   </component>
 </project>

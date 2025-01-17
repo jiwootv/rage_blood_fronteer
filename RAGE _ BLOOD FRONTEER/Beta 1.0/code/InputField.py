@@ -5,8 +5,7 @@ import os
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
 # 두 개의 폰트 경로 설정
-font_path_korean = os.path.abspath(os.path.join(current_dir, '..', 'data', 'font', 'DungGeunMo.otf'))
-font_path_japanese = os.path.abspath(os.path.join(current_dir, '..', 'data', 'font', 'BestTen-CRT.otf'))  # 일본어, 한자 지원
+font_path_korean = os.path.abspath(os.path.join(current_dir, '..', 'data', 'font', 'font1.otf'))
 
 
 class InputField:
@@ -17,8 +16,7 @@ class InputField:
         self.screen = screen
         self.image = pygame.Surface(size, pygame.SRCALPHA)  # 투명한 배경의 표면 생성
         self.image.fill(color)  # 배경을 검은색으로 채움
-        self.font_korean = pygame.font.Font(font_path_korean, font_size)  # 한글 폰트
-        self.font_cjk = pygame.font.Font(font_path_japanese, font_size)  # 일본어, 한자 폰트
+        self.font = pygame.font.Font(font_path_korean, font_size)  # 한글 폰트
         self.text = ""  # 입력된 텍스트
         self.edit_pos = 0  # 커서의 위치
         self.text_edit = False  # 텍스트 편집 중 상태
@@ -44,6 +42,7 @@ class InputField:
                             self.edit_pos -= 1  # 커서를 한 칸 뒤로 이동
                     if event.key == pygame.K_RETURN:
                         self.set_state(True)
+                        events.remove(event)
                 elif event.type == pygame.TEXTEDITING:
                     # 텍스트 편집 상태일 때
                     self.text_edit = True
@@ -66,15 +65,7 @@ class InputField:
         pygame.draw.rect(self.screen, self.outline_color,
                          (self.pos[0] - 5, self.pos[1] - 5, self.size[0] + 10, self.size[1] + 10), 5)
 
-        # 텍스트 렌더링 시 텍스트 내용에 따라 폰트 선택
-        def get_font_for_text(text):
-            # 텍스트가 한자나 일본어를 포함하면 CJK 폰트 사용
-            if any('\u4e00' <= char <= '\u9fff' or '\u3040' <= char <= '\u30ff' for char in text):
-                return self.font_cjk
-            else:
-                return self.font_korean
-
-        font = get_font_for_text(self.text + self.text_editing)  # 텍스트에 맞는 폰트 선택
+        font = self.font  # 텍스트에 맞는 폰트 선택
         string = font.render(self.text + self.text_editing, True, (255, 255, 255))
         self.screen.blit(string, string.get_rect(topleft=(self.pos[0], self.pos[1] + self.text_y)))  # 텍스트 그리기
 
@@ -103,7 +94,7 @@ class InputField:
         if self.completed:
             return self.text
         else:
-            return None
+            return self.text + self.text_editing
 
     def set_state(self, state: bool):
         if state:

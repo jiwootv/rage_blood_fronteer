@@ -136,8 +136,9 @@ class Game:
         self.gbar.gui_set()
 
     def say_your_name(self, screen, events):
+        name_font = pygame.font.Font("data/font/font1.otf", 40)
         font = pygame.font.Font("data/font/font1.otf", 40)
-        if font.size(self.input_field.get_text())[0] > 400:
+        if name_font.size(self.input_field.get_text())[0] > 400:
             text = "잠시만요, 당신 이름이 이 텍스트 박스 안에 다 안 들어가요?"
         else:
             text = "당신의 이름은 무엇입니까?"
@@ -161,16 +162,26 @@ class Game:
 
             # 이름 이스터애그들
             creator_name = ["qwru0905"]
-            if font.size(self.input_field.get_text())[0] > 400:
+            with open("data/hangul_almost_no_used.txt", "rb") as file:
+                hangul_almost_no_used_text = file.read().decode('utf-8')
+                hangul_almost_no_used_list = hangul_almost_no_used_text.split(" ")
+            if name_font.size(self.name)[0] > 400:
                 text = "와... 엄청 긴 이름을 가졌군요?"
-            elif len(self.input_field.get_text()) == 1:
+            elif len(self.name) == 1:
                 text = "와... 엄청 짧은 이름을 가졌군요?"
-            elif len(self.input_field.get_text()) == 0:
+            elif len(self.name) == 0:
                 text = "와... 아무것도 안 쓰셨네요?"
-            elif self.input_field.get_text() in creator_name:
+            elif self.name in creator_name:
                 text = "오, 당신 이름이 저희 개발자 중 한 분이랑 겹치네요?"
             else:
-                text = f"당신의 이름이 {self.name}이 맞습니까?"
+                is_include_hangul_almost_no_used = False
+                for char in self.name:
+                    if char in hangul_almost_no_used_list:
+                        text = f"와... 당신 이름에 뭔가 잘 쓰이지 않는 글자가 들어가 있는 것 같네요."
+                        is_include_hangul_almost_no_used = True
+                        break
+                if not is_include_hangul_almost_no_used:
+                    text = f"당신의 이름이 {self.name}이 맞습니까?"
             draw_text_with_letter_wrapping(screen, text, font, (255, 255, 255),
                                            0, 150, 400, "center")
 

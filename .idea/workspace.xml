@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67dcdbfd-481c-47e8-b6b7-ce60f30bdd14" name="변경" comment="2025.1.17&#10;main.py 대거 수정&#10;이름 물어보는 창 만듬&#10;메인 화면에서 맵 볼수 있게 만듬">
-      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/auto_line.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/font/font1.otf" afterDir="false" />
+    <list default="true" id="67dcdbfd-481c-47e8-b6b7-ce60f30bdd14" name="변경" comment="2025.1.17&#10;이름 선택 창 수정&#10;일어랑 한국어 동시에 안나오는 버그 수정">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FromCreater.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/asdfasdf_hangul_almost_no_used.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/asdfasdf_hangul_often_used.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/NEW_rbf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NEW_rbf.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/InputField.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/InputField.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/자동 줄바꿈.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/opening.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/opening.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +58,7 @@
     "Python.1950MapEditor.executor": "Run",
     "Python.InputField.executor": "Run",
     "Python.MAP.executor": "Run",
+    "Python.asdfasdf_hangul_almost_no_used.executor": "Run",
     "Python.buildingSystem_test.executor": "Run",
     "Python.cousor.executor": "Run",
     "Python.get_name_ui.executor": "Run",
@@ -159,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737093052167</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="2025.1.17&#10;이름 선택 창 수정&#10;일어랑 한국어 동시에 안나오는 버그 수정">
+      <option name="closed" value="true" />
+      <created>1737110665167</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1737110665167</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,6 +189,7 @@
     <MESSAGE value="2025.01.13&#10;주석 달기, 코드 최적화&#10;(0112_1.mp4, buildingSystem_test.py, videoPlay.py 제외)" />
     <MESSAGE value="2025.1.16&#10;msgbox.py 프레임 유지 수정&#10;1950MapEditor.py에서 마우스에 있는 타일과 화변 보조 ui에서 나오는 타일이 다른 버그를 수정" />
     <MESSAGE value="2025.1.17&#10;main.py 대거 수정&#10;이름 물어보는 창 만듬&#10;메인 화면에서 맵 볼수 있게 만듬" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025.1.17&#10;main.py 대거 수정&#10;이름 물어보는 창 만듬&#10;메인 화면에서 맵 볼수 있게 만듬" />
+    <MESSAGE value="2025.1.17&#10;이름 선택 창 수정&#10;일어랑 한국어 동시에 안나오는 버그 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025.1.17&#10;이름 선택 창 수정&#10;일어랑 한국어 동시에 안나오는 버그 수정" />
   </component>
 </project>

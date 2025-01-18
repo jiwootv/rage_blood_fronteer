@@ -1,5 +1,9 @@
 # 개발자 분들께
 .venv 폴더를 git에 추가하는 것이 위험하다는 것을 깨닫고, 다음과 같은 것을 알려드릴려고 합니다.    
 만약 pip에서 추가적으로 무언가를 설치하셨다면 requirements.txt에 그 이름을 써 주시기 바랍니다.    
-그리고 다른 분들은 `pip install -r  requirements.txt`를 작성해 추가적인 pip을 설치해주시기 바랍니다.    
-qwru0905이가.
+그리고 다른 분들은 `pip install -r  requirements.txt`를 작성해 추가적인 pip을 설치해주시기 바랍니다.
+
+이 파일은 다른 개발자들도 메모 용으로 쓰시면 좋을 것 같습니다.
+
+### main.save 형식
+1. 이름

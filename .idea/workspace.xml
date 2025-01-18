@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67dcdbfd-481c-47e8-b6b7-ce60f30bdd14" name="변경" comment="2025.1.17&#10;이름 선택 창 수정&#10;일어랑 한국어 동시에 안나오는 버그 수정">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FromCreater.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/asdfasdf_hangul_almost_no_used.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/asdfasdf_hangul_often_used.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/NEW_rbf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NEW_rbf.iml" afterDir="false" />
+    <list default="true" id="67dcdbfd-481c-47e8-b6b7-ce60f30bdd14" name="변경" comment="2025.1.17&#10;pip 연동 편하게 하는 기능 추가&#10;~~이름 이스터에그 추가~~">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/opening.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/opening.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/InputField.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/InputField.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,11 +61,12 @@
     "Python.main.executor": "Run",
     "Python.msgbox.executor": "Run",
     "Python.popup_prototype.executor": "Run",
+    "Python.text_editor.executor": "Run",
     "Python.videoPlay.executor": "Run",
     "Python.자동 줄바꿈.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/chris/my_python/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/data/font"
+    "last_opened_file_path": "D:/chris/my_python/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/main.py"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -85,7 +80,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="InputField" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python">
       <module name="NEW_rbf" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -94,11 +89,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="SDK_NAME" value="Python 3.12 (rage_blood_fronteer)" />
+      <option name="WORKING_DIRECTORY" value="$ContentRoot$\RAGE _ BLOOD FRONTEER\Beta 1.0\" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/InputField.py" />
+      <option name="SCRIPT_NAME" value="main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -107,11 +103,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.InputField" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -170,7 +161,23 @@
       <option name="project" value="LOCAL" />
       <updated>1737110665167</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="2025.1.17&#10;pip 연동 편하게 하는 기능 추가&#10;~~이름 이스터에그 추가~~">
+      <option name="closed" value="true" />
+      <created>1737115138054</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1737115138054</updated>
+    </task>
+    <task id="LOCAL-00008" summary="2025.1.17&#10;pip 연동 편하게 하는 기능 추가&#10;~~이름 이스터에그 추가~~">
+      <option name="closed" value="true" />
+      <created>1737115184482</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1737115184482</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,6 +197,7 @@
     <MESSAGE value="2025.1.16&#10;msgbox.py 프레임 유지 수정&#10;1950MapEditor.py에서 마우스에 있는 타일과 화변 보조 ui에서 나오는 타일이 다른 버그를 수정" />
     <MESSAGE value="2025.1.17&#10;main.py 대거 수정&#10;이름 물어보는 창 만듬&#10;메인 화면에서 맵 볼수 있게 만듬" />
     <MESSAGE value="2025.1.17&#10;이름 선택 창 수정&#10;일어랑 한국어 동시에 안나오는 버그 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025.1.17&#10;이름 선택 창 수정&#10;일어랑 한국어 동시에 안나오는 버그 수정" />
+    <MESSAGE value="2025.1.17&#10;pip 연동 편하게 하는 기능 추가&#10;~~이름 이스터에그 추가~~" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025.1.17&#10;pip 연동 편하게 하는 기능 추가&#10;~~이름 이스터에그 추가~~" />
   </component>
 </project>

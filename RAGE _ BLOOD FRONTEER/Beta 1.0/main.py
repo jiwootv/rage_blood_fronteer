@@ -1,3 +1,6 @@
+import os
+from pathlib import Path
+
 import pygame
 import sys
 import code.MAP as game_map
@@ -9,6 +12,13 @@ from code.InputField import InputField
 from code.auto_line import draw_text_with_letter_wrapping
 
 pygame.init()
+# APPDATA와 LOCALAPPDATA 경로 가져오기
+appdata_path = Path(os.getenv('APPDATA')) / "rage_blood_fronteer"
+if not appdata_path.exists():
+    appdata_path.mkdir()
+main_save_file = appdata_path / "main.save"
+print(appdata_path)
+print(main_save_file)
 
 
 class GuiSet:
@@ -81,10 +91,17 @@ class Game:
                                                   "아주 길고도 긴 여행을 시작하게 된다."], 10, 0, 20)
 
         # 0 : 기본값 = 오프닝
-        self.now_screen = 0
+        if not main_save_file.exists():
+            self.now_screen = 0
+            self.name = ""
+        else:
+            self.now_screen = 1
+            with open(main_save_file, 'r', encoding='utf-8') as f:
+                self.name = f.readline().strip()
+                print(self.name)
+
         self.Map_c = game_map.Map(self.screen)
         self.input_field = InputField(self.screen, (120, 250), (400, 50), 40)
-        self.name = ""
         font = pygame.font.Font("data/font/font1.otf", 30)
         self.name_button = Button(170, 350, 300, 60, (255, 255, 255), text="확인", font=font)
         self.name_yes_button = Button(140, 280, 150, 60, (255, 255, 255), text="네", font=font)
@@ -190,21 +207,29 @@ class Game:
             for event in events:
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_RETURN:
-                        self.now_screen = 1
+                        self.name_yes()
                     if event.key == pygame.K_ESCAPE:
-                        self.input_field.set_state(False)
+                        self.name_no()
             if self.name_yes_button.is_over(pygame.mouse.get_pos()):
                 self.name_yes_button.color = (127, 127, 127)
                 if pygame.mouse.get_pressed()[0]:
-                    self.now_screen = 1
+                    self.name_yes()
             else:
                 self.name_yes_button.color = (255, 255, 255)
             if self.name_no_button.is_over(pygame.mouse.get_pos()):
                 self.name_no_button.color = (127, 127, 127)
                 if pygame.mouse.get_pressed()[0]:
-                    self.input_field.set_state(False)
+                    self.name_no()
             else:
                 self.name_no_button.color = (255, 255, 255)
+
+    def name_yes(self):
+        with open(main_save_file, "w+", encoding="utf8") as file:
+            file.write(self.name)
+        self.now_screen = 1
+
+    def name_no(self):
+        self.input_field.set_state(False)
 
 
 G = Game()

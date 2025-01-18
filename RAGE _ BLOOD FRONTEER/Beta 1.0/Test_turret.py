@@ -1,9 +1,9 @@
 import pygame
 import sys
 import math
-import code.Turret as turret
-import code.attack_alg as atalg
-from code.attack_alg import *
+import codes.Turret as turret
+import codes.attack_alg as atalg
+from codes.attack_alg import *
 
 # Pygame 초기화
 pygame.init()

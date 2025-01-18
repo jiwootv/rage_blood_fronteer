@@ -1,5 +1,5 @@
-import code.MapRandomMaker as MRM
-import code.TilesToMap as TTM
+import codes.MapRandomMaker as MRM
+import codes.TilesToMap as TTM
 import json
 for i in MRM.generate_map(2000, 20, 20): print(i)
 m = MRM.generate_map(2000, 20, 20)

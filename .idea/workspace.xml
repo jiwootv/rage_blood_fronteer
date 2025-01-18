@@ -4,8 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67dcdbfd-481c-47e8-b6b7-ce60f30bdd14" name="변경" comment="2025.1.18&#10;이름 적는거 다 만듬">
-      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/InputField.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/InputField.py" afterDir="false" />
+    <list default="true" id="67dcdbfd-481c-47e8-b6b7-ce60f30bdd14" name="변경" comment="2025.1.18&#10;버그를 바로 발견해버려서 수정함">
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/1950MapEditor_Ver2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/codes/MAP_Ver2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/codes/pygame_tkiter_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/fuck_list.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/data/map_Ver2/room1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/1950MapEditor.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/1950MapEditor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/TESTFONT.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/TESTFONT.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/TEst.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/TEst.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/Test_turret.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/Test_turret.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/buildingSystem_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/buildingSystem_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/InputField.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/codes/InputField.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/MAP.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/codes/MAP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/MapRandomMaker.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/codes/MapRandomMaker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/TextBoxes.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/codes/TextBoxes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/TilesToMap.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/codes/TilesToMap.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/Turret.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/codes/Turret.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/TurretBulletTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/codes/TurretBulletTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/codes/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/asdasdsad.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/codes/asdasdsad.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/asdfasdf_hangul_almost_no_used.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/codes/asdfasdf_hangul_almost_no_used.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/attack_alg.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/codes/attack_alg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/auto_line.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/codes/auto_line.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/button.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/codes/button.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/cousor.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/codes/cousor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/codes/gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/gun_shoot.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/codes/gun_shoot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/inventory.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/codes/inventory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/msgbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/codes/msgbox.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/opening.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/codes/opening.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/save.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/codes/save.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +65,9 @@
     &quot;accountId&quot;: &quot;128c3804-e89e-4e44-9153-8b4b34f84c65&quot;
   }
 }</component>
+  <component name="NamedScopeManager">
+    <scope name="projects" pattern="file[NEW_rbf]:RAGE _ BLOOD FRONTEER/Beta 1.0/*" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -48,8 +82,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.1950MapEditor.executor": "Run",
+    "Python.1950MapEditor_Ver2.executor": "Run",
     "Python.InputField.executor": "Run",
     "Python.MAP.executor": "Run",
+    "Python.TESTFONT.executor": "Run",
     "Python.asdfasdf_hangul_almost_no_used.executor": "Run",
     "Python.buildingSystem_test.executor": "Run",
     "Python.cousor.executor": "Run",
@@ -59,25 +95,74 @@
     "Python.main.executor": "Run",
     "Python.msgbox.executor": "Run",
     "Python.popup_prototype.executor": "Run",
+    "Python.pygame_tkiter_test.executor": "Run",
     "Python.text_editor.executor": "Run",
     "Python.videoPlay.executor": "Run",
     "Python.자동 줄바꿈.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/chris/my_python/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/main.py"
+    "last_opened_file_path": "D:/chris/my_python/rage_blood_fronteer/RAGE _ BLOOD FRONTEER/Beta 1.0/code"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\chris\my_python\rage_blood_fronteer\RAGE _ BLOOD FRONTEER\Beta 1.0\code" />
+      <recent name="D:\chris\my_python\rage_blood_fronteer\RAGE _ BLOOD FRONTEER\Beta 1.0\data" />
+      <recent name="D:\chris\my_python\rage_blood_fronteer\RAGE _ BLOOD FRONTEER\Beta 1.0" />
       <recent name="D:\chris\my_python\rage_blood_fronteer\RAGE _ BLOOD FRONTEER\Beta 1.0\data\font" />
       <recent name="D:\chris\my_python\rage_blood_fronteer\RAGE _ BLOOD FRONTEER\Beta 1.0\data\video" />
-      <recent name="C:\Users\PC\PycharmProjects\NEW_rbf" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\chris\my_python\rage_blood_fronteer\RAGE _ BLOOD FRONTEER\Beta 1.0\data\video" />
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="1950MapEditor" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="NEW_rbf" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (rage_blood_fronteer)" />
+      <option name="WORKING_DIRECTORY" value="$ContentRoot$\RAGE _ BLOOD FRONTEER\Beta 1.0\" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="1950MapEditor.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="1950MapEditor_Ver2" type="PythonConfigurationType" factoryName="Python">
+      <module name="NEW_rbf" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (rage_blood_fronteer)" />
+      <option name="WORKING_DIRECTORY" value="$ContentRoot$\RAGE _ BLOOD FRONTEER\Beta 1.0\" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="1950MapEditor_Ver2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python">
       <module name="NEW_rbf" />
       <option name="ENV_FILES" value="" />
@@ -101,6 +186,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.1950MapEditor" />
+      <item itemvalue="Python.1950MapEditor_Ver2" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -191,7 +281,23 @@
       <option name="project" value="LOCAL" />
       <updated>1737163355656</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="2025.1.18&#10;생각해보니까 수정해야 하는거 하나 있더라">
+      <option name="closed" value="true" />
+      <created>1737163522639</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1737163522639</updated>
+    </task>
+    <task id="LOCAL-00012" summary="2025.1.18&#10;버그를 바로 발견해버려서 수정함">
+      <option name="closed" value="true" />
+      <created>1737163543294</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1737163543294</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -213,6 +319,8 @@
     <MESSAGE value="2025.1.17&#10;이름 선택 창 수정&#10;일어랑 한국어 동시에 안나오는 버그 수정" />
     <MESSAGE value="2025.1.17&#10;pip 연동 편하게 하는 기능 추가&#10;~~이름 이스터에그 추가~~" />
     <MESSAGE value="2025.1.18&#10;이름 적는거 다 만듬" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025.1.18&#10;이름 적는거 다 만듬" />
+    <MESSAGE value="2025.1.18&#10;생각해보니까 수정해야 하는거 하나 있더라" />
+    <MESSAGE value="2025.1.18&#10;버그를 바로 발견해버려서 수정함" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025.1.18&#10;버그를 바로 발견해버려서 수정함" />
   </component>
 </project>

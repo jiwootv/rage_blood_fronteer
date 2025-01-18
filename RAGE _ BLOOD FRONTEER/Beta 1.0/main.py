@@ -1,15 +1,16 @@
+import json
 import os
 from pathlib import Path
 
 import pygame
 import sys
-import code.MAP as game_map
-import code.cousor as cousor
-import code.opening as opening
-import code.msgbox as msgbox
-import code.gui as gui
-from code.InputField import InputField
-from code.auto_line import draw_text_with_letter_wrapping
+import codes.MAP as game_map
+import codes.cousor as cousor
+import codes.opening as opening
+import codes.msgbox as msgbox
+import codes.gui as gui
+from codes.InputField import InputField
+from codes.auto_line import draw_text_with_letter_wrapping
 
 pygame.init()
 # APPDATA와 LOCALAPPDATA 경로 가져오기
@@ -31,7 +32,7 @@ class GuiSet:
         self.gbar.draw(screen=self.screen)
 
 
-class Button:
+class SimpleButton:
     def __init__(self, x, y, width, height, color, outline=None, text='', text_color=(0, 0, 0), font=None, img=''):
         self.x = x
         self.y = y
@@ -103,9 +104,10 @@ class Game:
         self.Map_c = game_map.Map(self.screen)
         self.input_field = InputField(self.screen, (120, 250), (400, 50), 40)
         font = pygame.font.Font("data/font/font1.otf", 30)
-        self.name_button = Button(170, 350, 300, 60, (255, 255, 255), text="확인", font=font)
-        self.name_yes_button = Button(140, 280, 150, 60, (255, 255, 255), text="네", font=font)
-        self.name_no_button = Button(350, 280, 150, 60, (255, 255, 255), text="아니요", font=font)
+        self.name_button = SimpleButton(170, 350, 300, 60, (255, 255, 255), text="확인", font=font)
+        self.name_yes_button = SimpleButton(140, 280, 150, 60, (255, 255, 255), text="네", font=font)
+        self.name_no_button = SimpleButton(350, 280, 150, 60, (255, 255, 255), text="아니요", font=font)
+        self.is_say_bad_word = False
 
         pygame.display.set_caption("RAGE: BLOOD FRONTEER")
 
@@ -153,12 +155,20 @@ class Game:
         self.gbar.gui_set()
 
     def say_your_name(self, screen, events):
+        text = "당신의 이름은 무엇입니까?"
         name_font = pygame.font.Font("data/font/font1.otf", 40)
         font = pygame.font.Font("data/font/font1.otf", 40)
+        with open("data/fuck_list.json", "r", encoding="utf8") as file:
+            fuck_list = json.load(file)["badwords"]
         if name_font.size(self.input_field.get_text())[0] > 400:
             text = "잠시만요, 당신 이름이 이 텍스트 박스 안에 다 안 들어가요?"
-        else:
-            text = "당신의 이름은 무엇입니까?"
+        elif self.input_field.get_text() in fuck_list:
+            self.is_say_bad_word = True
+            self.input_field.set_text("")
+
+        if self.is_say_bad_word:
+            text = "나쁜 말은 안돼요!"
+
         draw_text_with_letter_wrapping(screen, text, font, (255, 255, 255),
                                        0, 100, 640, "center")
 

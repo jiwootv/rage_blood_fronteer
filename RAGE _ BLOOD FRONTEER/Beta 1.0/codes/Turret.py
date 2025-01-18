@@ -1,6 +1,6 @@
 import pygame
 # noinspection PyUnresolvedReferences
-import code.attack_alg as atalg
+import codes.attack_alg as atalg
 # 위 구문은 원래 작동 안되는게 정상임 ㅋ
 # 하지만 실제 실행은 code 폴더가 아닌 외부 폴더, 즉 main 파일들이나 Test 계열에서 실행되기에 문제가 없음.
 # 위 noinspection 어쩌구는 Pycharm에서 오류로 표시되는게 거슬려서 저렇게 해놓은거라고 생각하면 됨.

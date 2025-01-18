@@ -18,6 +18,7 @@ class InputField:
         self.image.fill(color)
         self.font = pygame.font.Font(font_path_korean, font_size)
         self.text = ""
+        self.render_text = ""
         self.edit_pos = 0
         self.text_edit = False
         self.text_editing = ""
@@ -48,9 +49,19 @@ class InputField:
                         self.backspace_pressed = True
                         self.last_backspace_time = pygame.time.get_ticks()  # 현재 시간 기록
                         self.delete_character()
+                    elif event.key == pygame.K_DELETE:
+                        self.delete_forward_character()
                     elif event.key == pygame.K_RETURN:
                         self.set_state(True)
                         events.remove(event)
+                    elif event.key == pygame.K_RIGHT:
+                        self.edit_pos = min(self.edit_pos + 1, len(self.render_text))
+                        self.last_cursor_toggle_time = pygame.time.get_ticks()
+                        self.cursor_visible = not self.cursor_visible
+                    elif event.key == pygame.K_LEFT:
+                        self.edit_pos = max(self.edit_pos - 1, 0)
+                        self.last_cursor_toggle_time = pygame.time.get_ticks()
+                        self.cursor_visible = not self.cursor_visible
                 elif event.type == pygame.KEYUP:
                     if event.key == pygame.K_BACKSPACE:
                         self.backspace_pressed = False
@@ -58,11 +69,13 @@ class InputField:
                 elif event.type == pygame.TEXTEDITING:
                     self.text_edit = True
                     self.text_editing = event.text
+                    self.render_text = self.text[:self.edit_pos] + event.text + self.text[self.edit_pos:]
                 elif event.type == pygame.TEXTINPUT:
                     print(event.text,  " 1234asdf")
                     self.text_edit = False
                     self.text_editing = ""
                     self.text = self.text[:self.edit_pos] + event.text + self.text[self.edit_pos:]
+                    self.render_text = self.text
                     self.edit_pos = min(self.edit_pos + len(event.text), len(self.text))
                     self.last_cursor_toggle_time = pygame.time.get_ticks()
                     self.cursor_visible = True
@@ -82,7 +95,13 @@ class InputField:
     def delete_character(self):
         if self.edit_pos > 0:
             self.text = self.text[:self.edit_pos - 1] + self.text[self.edit_pos:]
+            self.render_text = self.text
             self.edit_pos -= 1
+
+    def delete_forward_character(self):
+        if self.edit_pos < len(self.text):
+            self.text = self.text[:self.edit_pos] + self.text[self.edit_pos + 1:]
+            self.render_text = self.text
 
     def draw(self):
         # 기존 draw 함수 그대로 유지
@@ -90,15 +109,17 @@ class InputField:
         pygame.draw.rect(self.screen, self.outline_color,
                          (self.pos[0] - 5, self.pos[1] - 5, self.size[0] + 10, self.size[1] + 10), 5)
         font = self.font
-        string = font.render(self.text + self.text_editing, True, (255, 255, 255))
+        string = font.render(self.render_text, True, (255, 255, 255))
         self.screen.blit(string, string.get_rect(topleft=(self.pos[0], self.pos[1] + self.text_y)))
 
         if not self.completed:
             if self.text_editing:
-                underline_start_pos = self.pos[0] + font.size(self.text)[0]
+                underline_start_pos = self.pos[0] + font.size(
+                    self.render_text[:self.edit_pos])[0]
                 underline_surface = pygame.Surface((font.size(self.text_editing)[0], 2))
                 underline_surface.fill((255, 255, 255))
-                self.screen.blit(underline_surface, (underline_start_pos, self.pos[1] + font.get_height() + self.text_y))
+                self.screen.blit(underline_surface,
+                                 (underline_start_pos, self.pos[1] + font.get_height() + self.text_y))
 
             current_time = pygame.time.get_ticks()
             if current_time - self.last_cursor_toggle_time >= self.cursor_blink_rate:
@@ -106,7 +127,8 @@ class InputField:
                 self.last_cursor_toggle_time = current_time
 
             if self.cursor_visible:
-                cursor_x = self.pos[0] + font.size(self.text + self.text_editing)[0]
+                cursor_x = self.pos[0] + font.size(
+                    self.render_text[:self.edit_pos if not self.text_editing else self.edit_pos + 1])[0]
                 cursor_surface = pygame.Surface((2, font.get_height()))
                 cursor_surface.fill((255, 255, 255))
                 self.screen.blit(cursor_surface, (cursor_x, self.pos[1] + self.text_y))
@@ -115,13 +137,24 @@ class InputField:
         if self.completed:
             return self.text
         else:
-            return self.text + self.text_editing
+            return self.render_text
+
+    def set_text(self, text):
+        self.text_reset()
+        self.text = text
+
+    def text_reset(self):
+        pygame.key.stop_text_input()
+        self.text_edit = False
+        self.text = self.text[:self.edit_pos] + self.text_editing + self.text[self.edit_pos:]
+        self.edit_pos = min(self.edit_pos + len(self.text_editing), len(self.text))
+        self.text_editing = ""
+        pygame.key.start_text_input()
 
     def set_state(self, state: bool):
         if state:
             self.completed = True
-            self.text = self.text + self.text_editing
-            self.text_editing = ""
+            self.text_reset()
             pygame.key.stop_text_input()
         else:
             self.completed = False

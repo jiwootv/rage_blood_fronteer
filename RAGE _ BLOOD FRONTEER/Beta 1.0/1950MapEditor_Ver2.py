@@ -1,15 +1,5 @@
-# 와 위대한 시작..
-# 1950 게임 맵 에디터 메인 코드
-
-"""IRID 타입 총정리
-0번: 없음
-1번: 다음 방 이동
-2번: 이전 방 이동
-3번: 없음
-"""
-
-import codes.button as bt  # 절대 빼먹으면 안되는 것
-import codes.MAP as m_ap
+import codes.button as bt
+import codes.MAP_Ver2 as game_map
 import pygame
 import json
 
@@ -39,13 +29,13 @@ class Main:
         self.tile_size = 60
         self.map_max = 30
 
-        self.Map_c = m_ap.Map(self.screen)
+        self.Map_c = game_map.Map(self.screen)
         self.file_index = 0
         self.select_IRID = 0
         self.mouserect = 0
         self.select_tileType = 1
         self.map_load_onoff = 0
-        self.saveButton = bt.Button(20, 600, pygame.image.load("data/img/save_btn.png"), 1)
+        self.saveButton = bt.Button(80, 600, pygame.image.load("data/img/save_btn.png"), 1)
         self.loadButton = bt.Button(220, 600, pygame.image.load("data/img/load_btn.png"), 1)
         self.is_wall = 1
         self.playing = True
@@ -56,8 +46,6 @@ class Main:
             self.now_map.append(self.Map_c.mapGet(i))
         if DEBUG:
             print(self.now_map, "\nasd")
-
-        self.IRID_list = ["없음", "다음 방 이동", "이전 방 이동"]
         pygame.display.set_caption("1950 Map Editor")
         self.text = lambda size, text, color, x, y: self.screen.blit(
             pygame.font.Font(r"data/font/DungGeunMo.otf", size).render(text, 1, color), (x, y))
@@ -162,6 +150,10 @@ class Main:
             # print("WALL or FLOOR : {}".format(self.is_wall))
 
         # 버튼 드로우
+        if self.saveButton.draw(self.screen):
+            self.save()
+            self.collect_SE.play()
+
         if self.loadButton.draw(self.screen):
             self.Map_c.load_to_list(self.now_map[self.file_index])
             self.collect_SE.play()
@@ -270,6 +262,9 @@ class Main:
             self.clock.tick(60)
     # print(self.now_map[self.file_index])
     # print(json.dumps(self.now_map[self.file_index], indent=4, separators=("{", "="), sort_keys=True))
+
+    def make_new_map(self):
+        pass
 
 
 M = Main()

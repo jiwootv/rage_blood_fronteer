@@ -1,8 +1,8 @@
 import pygame
 import sys
 import math
-import code.Turret as turret
-import code.TextBoxes as Text
+import codes.Turret as turret
+import codes.TextBoxes as Text
 
 # Pygame 초기화
 pygame.init()

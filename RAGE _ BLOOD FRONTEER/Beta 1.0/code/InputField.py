@@ -75,6 +75,9 @@ class InputField:
                     self.delete_character()
                     self.last_backspace_time = current_time
                     self.is_backspace_repeat = True
+                    if self.text == "":
+                        self.is_backspace_repeat = False
+                        self.backspace_pressed = False
 
     def delete_character(self):
         if self.edit_pos > 0:

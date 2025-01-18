@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67dcdbfd-481c-47e8-b6b7-ce60f30bdd14" name="변경" comment="2025.1.17&#10;pip 연동 편하게 하는 기능 추가&#10;~~이름 이스터에그 추가~~">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="67dcdbfd-481c-47e8-b6b7-ce60f30bdd14" name="변경" comment="2025.1.18&#10;이름 적는거 다 만듬">
       <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/InputField.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/code/InputField.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGE _ BLOOD FRONTEER/Beta 1.0/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +175,23 @@
       <option name="project" value="LOCAL" />
       <updated>1737115184482</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="2025.1.18&#10;이름 적는거 다 만듬">
+      <option name="closed" value="true" />
+      <created>1737163272506</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1737163272506</updated>
+    </task>
+    <task id="LOCAL-00010" summary="2025.1.18&#10;이름 적는거 다 만듬">
+      <option name="closed" value="true" />
+      <created>1737163355656</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1737163355656</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,6 +212,7 @@
     <MESSAGE value="2025.1.17&#10;main.py 대거 수정&#10;이름 물어보는 창 만듬&#10;메인 화면에서 맵 볼수 있게 만듬" />
     <MESSAGE value="2025.1.17&#10;이름 선택 창 수정&#10;일어랑 한국어 동시에 안나오는 버그 수정" />
     <MESSAGE value="2025.1.17&#10;pip 연동 편하게 하는 기능 추가&#10;~~이름 이스터에그 추가~~" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025.1.17&#10;pip 연동 편하게 하는 기능 추가&#10;~~이름 이스터에그 추가~~" />
+    <MESSAGE value="2025.1.18&#10;이름 적는거 다 만듬" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025.1.18&#10;이름 적는거 다 만듬" />
   </component>
 </project>

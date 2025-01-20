@@ -926,6 +926,20 @@
             ],
             "type": "wall"
         },
+        "1;1": {
+            "event": [
+                {
+                    "room": "room3.json",
+                    "type": "room_move"
+                }
+            ],
+            "img": "PlanetFloor3",
+            "pos": [
+                1,
+                1
+            ],
+            "type": "wall"
+        },
         "20;14": {
             "IRID": 0,
             "img": "SpaceTile1",
@@ -935,44 +949,13 @@
             ],
             "type": "wall"
         },
-        "21;15": {
-            "IRID": 0,
-            "img": "SpaceTile1",
-            "pos": [
-                21,
-                15
-            ],
-            "type": "wall"
-        },
-        "22;15": {
-            "IRID": 0,
-            "img": "SpaceTile1",
-            "pos": [
-                22,
-                15
-            ],
-            "type": "wall"
-        },
-        "23;14": {
-            "IRID": 0,
-            "img": "SpaceTile1",
-            "pos": [
-                23,
-                14
-            ],
-            "type": "wall"
-        },
-        "24;14": {
-            "IRID": 0,
-            "img": "SpaceTile1",
-            "pos": [
-                24,
-                14
-            ],
-            "type": "wall"
-        },
         "3;3": {
-            "IRID": 0,
+            "event": [
+                {
+                    "room": "room3.json",
+                    "type": "room_move"
+                }
+            ],
             "img": "SpaceTileCorner3",
             "pos": [
                 3,

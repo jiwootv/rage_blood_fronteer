@@ -3,7 +3,6 @@
 import json
 import os
 
-import pygame
 import sys
 # import effect
 
@@ -18,44 +17,37 @@ DEBUG = False
 print(__name__)
 
 
-class Building(pygame.sprite.Sprite):
-    def __init__(self, image_path, position):
-        """
-        이거 아직은 안 쓰는 클래스라 뭐 하는 건지 모르겠음
-        :param image_path: image_path 지정
-        :param position: (안 씀)
-        """
-        super().__init__()
-        self.image = pygame.image.load(image_path).convert_alpha()
-        self.rect = self.image.get_rect()
-
-
 class Map:
-    def __init__(self, screen, map_dir="data/map_Ver2"):
+    def __init__(self, screen, map_dir="data/map_Ver2", pygame_in_game=None):
         """
         Map 클래스,
         :param screen: pygame의 스크린
         """
 
+        if pygame_in_game is not None:
+            global pygame
+            pygame = pygame_in_game
+        else:
+            import pygame  # 기본 pygame을 참조
+
         # tile, lava, water, furnance 같은 타일의 이미지 로드
-        self.assets = \
-            {
-                "SpaceTile1": pygame.image.load("data/img/tile/SPACESHIPS/SpaceTile1.png"),
-                "SpaceTileCorner1": pygame.image.load("data/img/tile/SPACESHIPS/SpaceTileCorner1.png"),
-                "SpaceTileCorner2": pygame.image.load("data/img/tile/SPACESHIPS/SpaceTileCorner2.png"),
-                "SpaceTileCorner3": pygame.image.load("data/img/tile/SPACESHIPS/SpaceTileCorner3.png"),
-                "SpaceTileCorner4": pygame.image.load("data/img/tile/SPACESHIPS/SpaceTileCorner4.png"),
-                "SpaceTileSide1": pygame.image.load("data/img/tile/SPACESHIPS/SpaceTileSide1.png"),
-                "SpaceTileSide2": pygame.image.load("data/img/tile/SPACESHIPS/SpaceTileSide2.png"),
-                "SpaceTileSide3": pygame.image.load("data/img/tile/SPACESHIPS/SpaceTileSide3.png"),
-                "SpaceTileSide4": pygame.image.load("data/img/tile/SPACESHIPS/SpaceTileSide4.png"),
-                "PlanetFloor1": pygame.image.load("data/img/tile/planet/PlanetFloor1.png"),
-                "PlanetFloor2": pygame.image.load("data/img/tile/planet/PlanetFloor2.png"),
-                "PlanetFloor3": pygame.image.load("data/img/tile/planet/PlanetFloor3.png"),
-                "lava": pygame.image.load("data/img/tile/planet/lava.png"),
-                "water": pygame.image.load("data/img/tile/planet/water.png"),
-                "furnance": pygame.image.load("data/img/tile/planet/furnance.png")
-            }
+        self.assets = {
+            "SpaceTile1": pygame.image.load("data/img/tile/SPACESHIPS/SpaceTile1.png"),
+            "SpaceTileCorner1": pygame.image.load("data/img/tile/SPACESHIPS/SpaceTileCorner1.png"),
+            "SpaceTileCorner2": pygame.image.load("data/img/tile/SPACESHIPS/SpaceTileCorner2.png"),
+            "SpaceTileCorner3": pygame.image.load("data/img/tile/SPACESHIPS/SpaceTileCorner3.png"),
+            "SpaceTileCorner4": pygame.image.load("data/img/tile/SPACESHIPS/SpaceTileCorner4.png"),
+            "SpaceTileSide1": pygame.image.load("data/img/tile/SPACESHIPS/SpaceTileSide1.png"),
+            "SpaceTileSide2": pygame.image.load("data/img/tile/SPACESHIPS/SpaceTileSide2.png"),
+            "SpaceTileSide3": pygame.image.load("data/img/tile/SPACESHIPS/SpaceTileSide3.png"),
+            "SpaceTileSide4": pygame.image.load("data/img/tile/SPACESHIPS/SpaceTileSide4.png"),
+            "PlanetFloor1": pygame.image.load("data/img/tile/planet/PlanetFloor1.png"),
+            "PlanetFloor2": pygame.image.load("data/img/tile/planet/PlanetFloor2.png"),
+            "PlanetFloor3": pygame.image.load("data/img/tile/planet/PlanetFloor3.png"),
+            "lava": pygame.image.load("data/img/tile/planet/lava.png"),
+            "water": pygame.image.load("data/img/tile/planet/water.png"),
+            "furnance": pygame.image.load("data/img/tile/planet/furnance.png")
+        }
 
         self.p_hitbox = pygame.rect.Rect(287, 215, 66, 99)
         print(self.p_hitbox, "SAD")
@@ -83,14 +75,13 @@ class Map:
 
         # map 설정
         self.map = {}
+        self.map_dir = map_dir
 
         # 특정 폴더 내 JSON 파일들 전부 읽어오기
-        for filename in os.listdir(map_dir):
+        for filename in os.listdir(self.map_dir):
             if filename.endswith(".json"):  # JSON 파일만 처리
-                with open(os.path.join(map_dir, filename), 'r', encoding='utf-8') as f:
+                with open(os.path.join(self.map_dir, filename), 'r', encoding='utf-8') as f:
                     self.map[filename] = json.load(f)
-
-        self.MAP_COUNT = len(self.map)  # JSON 파일 개수
 
     def get_key(self, val, dict):
         """
@@ -258,9 +249,16 @@ class Map:
             print("TEST", str(self.map[f"room{mapNumber}.json"]))
         return self.map[f"room{mapNumber}.json"]
 
+    def get_all_map(self):
+        """
+        map 전체를 반환합니다.
+        :return: self.map
+        """
+        return self.map
+
     # def map_dataEdit(self, mapNumber):
 
-    def event(self):
+    def event(self, events=None):
         self.TileHitboxIR = []
         self.tileEvent = []
         # TileHitboxIR 사이즈 지정 (tile_list의 사이즈 동기화)
@@ -313,8 +311,40 @@ class Map:
         """
         return self.move_pos
 
+    def get_map_list(self):
+        """
+        맵 리스트를 반환합니다.
+        :return: self.map의 키
+        """
+        return self.map.keys()
+
+    def reload_file(self):
+        # map 설정
+        self.map = {}
+
+        # 특정 폴더 내 JSON 파일들 전부 읽어오기
+        for filename in os.listdir(self.map_dir):
+            if filename.endswith(".json"):  # JSON 파일만 처리
+                with open(os.path.join(self.map_dir, filename), 'r', encoding='utf-8') as f:
+                    self.map[filename] = json.load(f)
+
+    def get_size(self):
+        """
+        맵의 사이즈를 반환합니다.
+        :return: [self.mapW, self.mapH]
+        """
+        return [self.mapW, self.mapH]
+
+    def get_assets(self):
+        """
+        assets를 반환합니다.
+        :return: self.assets
+        """
+        return self.assets
+
 
 if __name__ == "__main__":
+    import pygame
     pygame.init()
     Screen = pygame.display.set_mode((640, 480))
     M = Map(Screen)

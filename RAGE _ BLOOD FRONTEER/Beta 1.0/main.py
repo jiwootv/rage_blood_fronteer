@@ -4,7 +4,8 @@ from pathlib import Path
 
 import pygame
 import sys
-import codes.MAP as game_map
+import codes.MAP as GameMap
+import codes.MAP_Ver2 as GameMap_ver2
 import codes.cousor as cousor
 import codes.opening as opening
 import codes.msgbox as msgbox
@@ -20,6 +21,9 @@ if not appdata_path.exists():
 main_save_file = appdata_path / "main.save"
 print(appdata_path)
 print(main_save_file)
+
+# 기존은 1, 내(qwru0905)가 만든건 2
+version = 2
 
 
 class GuiSet:
@@ -101,7 +105,10 @@ class Game:
                 self.name = f.readline().strip()
                 print(self.name)
 
-        self.Map_c = game_map.Map(self.screen)
+        if version == 1:
+            self.Map_c = GameMap.Map(self.screen)
+        elif version == 2:
+            self.Map_c = GameMap_ver2.Map(self.screen)
         self.input_field = InputField(self.screen, (120, 250), (400, 50), 40)
         font = pygame.font.Font("data/font/font1.otf", 30)
         self.name_button = SimpleButton(170, 350, 300, 60, (255, 255, 255), text="확인", font=font)
@@ -162,9 +169,6 @@ class Game:
             fuck_list = json.load(file)["badwords"]
         if name_font.size(self.input_field.get_text())[0] > 400:
             text = "잠시만요, 당신 이름이 이 텍스트 박스 안에 다 안 들어가요?"
-        elif self.input_field.get_text() in fuck_list:
-            self.is_say_bad_word = True
-            self.input_field.set_text("")
 
         if self.is_say_bad_word:
             text = "나쁜 말은 안돼요!"
@@ -182,6 +186,10 @@ class Game:
             self.name_button.color = (255, 255, 255)
         self.name_button.draw(self.screen)
         if self.input_field.is_completed():
+            if self.input_field.get_text() in fuck_list:
+                self.is_say_bad_word = True
+                self.input_field.set_state(False)
+                return
             self.name = self.input_field.get_text()
             pygame.draw.rect(screen, (255, 255, 255), (98, 98, 444, 284), 0)
             pygame.draw.rect(screen, (0, 0, 0), (100, 100, 440, 280), 0)

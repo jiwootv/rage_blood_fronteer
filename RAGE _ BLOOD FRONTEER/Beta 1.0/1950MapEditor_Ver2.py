@@ -401,7 +401,6 @@ class Main:
     def run(self):
         self.Map_c.load_to_list(self.Map_c.mapGet(1))
         self.Map_c.draw_set()
-        self.Map_c.brickPassSet(1)
         while self.running:
             pygame.event.pump()
 

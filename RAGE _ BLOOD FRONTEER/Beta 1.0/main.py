@@ -196,7 +196,7 @@ class Game:
             font = pygame.font.Font("data/font/font1.otf", 30)
 
             # 이름 이스터애그들
-            creator_name = ["qwru0905"]
+            creator_name = ["qwru0905", "PuangE", "YJ", "지우", "유지우", "민규", "김민규"]
             with open("data/hangul_almost_no_used.txt", "rb") as file:
                 hangul_almost_no_used_text = file.read().decode('utf-8')
                 hangul_almost_no_used_list = hangul_almost_no_used_text.split(" ")

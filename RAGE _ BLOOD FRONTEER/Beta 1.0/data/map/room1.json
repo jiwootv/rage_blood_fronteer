@@ -26,6 +26,15 @@
             ],
             "type": "wall"
         },
+        "10;12": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                10,
+                12
+            ],
+            "type": "wall"
+        },
         "10;3": {
             "IRID": 1,
             "img": "PlanetFloor3",
@@ -63,8 +72,8 @@
             "type": "wall"
         },
         "10;7": {
-            "IRID": 0,
-            "img": "SpaceTile1",
+            "IRID": 1,
+            "img": "PlanetFloor3",
             "pos": [
                 10,
                 7
@@ -104,6 +113,15 @@
             "pos": [
                 11,
                 11
+            ],
+            "type": "wall"
+        },
+        "11;12": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                11,
+                12
             ],
             "type": "wall"
         },
@@ -162,8 +180,8 @@
             "type": "wall"
         },
         "11;9": {
-            "IRID": 0,
-            "img": "SpaceTile1",
+            "IRID": 1,
+            "img": "PlanetFloor3",
             "pos": [
                 11,
                 9
@@ -185,6 +203,15 @@
             "pos": [
                 12,
                 11
+            ],
+            "type": "wall"
+        },
+        "12;12": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                12,
+                12
             ],
             "type": "wall"
         },
@@ -278,6 +305,15 @@
             ],
             "type": "wall"
         },
+        "13;12": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                13,
+                12
+            ],
+            "type": "wall"
+        },
         "13;13": {
             "IRID": 0,
             "img": "SpaceTile1",
@@ -315,8 +351,8 @@
             "type": "wall"
         },
         "13;6": {
-            "IRID": 0,
-            "img": "SpaceTile1",
+            "IRID": 1,
+            "img": "PlanetFloor3",
             "pos": [
                 13,
                 6
@@ -324,8 +360,8 @@
             "type": "wall"
         },
         "13;7": {
-            "IRID": 0,
-            "img": "SpaceTile1",
+            "IRID": 1,
+            "img": "PlanetFloor3",
             "pos": [
                 13,
                 7
@@ -365,6 +401,15 @@
             "pos": [
                 14,
                 11
+            ],
+            "type": "wall"
+        },
+        "14;12": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                14,
+                12
             ],
             "type": "wall"
         },
@@ -423,8 +468,8 @@
             "type": "wall"
         },
         "14;7": {
-            "IRID": 0,
-            "img": "SpaceTile1",
+            "IRID": 1,
+            "img": "PlanetFloor3",
             "pos": [
                 14,
                 7
@@ -522,7 +567,7 @@
             "type": "wall"
         },
         "15;7": {
-            "IRID": 4,
+            "IRID": 1,
             "img": "PlanetFloor3",
             "pos": [
                 15,
@@ -531,8 +576,8 @@
             "type": "wall"
         },
         "15;8": {
-            "IRID": 4,
-            "img": "PlanetFloor1",
+            "IRID": 1,
+            "img": "PlanetFloor3",
             "pos": [
                 15,
                 8
@@ -540,7 +585,7 @@
             "type": "wall"
         },
         "15;9": {
-            "IRID": 0,
+            "IRID": 1,
             "img": "PlanetFloor3",
             "pos": [
                 15,
@@ -639,8 +684,8 @@
             "type": "wall"
         },
         "16;9": {
-            "IRID": 0,
-            "img": "SpaceTile1",
+            "IRID": 1,
+            "img": "PlanetFloor3",
             "pos": [
                 16,
                 9
@@ -648,7 +693,7 @@
             "type": "wall"
         },
         "17;10": {
-            "IRID": 4,
+            "IRID": 1,
             "img": "PlanetFloor3",
             "pos": [
                 17,
@@ -738,8 +783,8 @@
             "type": "wall"
         },
         "17;9": {
-            "IRID": 0,
-            "img": "SpaceTile1",
+            "IRID": 1,
+            "img": "PlanetFloor3",
             "pos": [
                 17,
                 9
@@ -747,8 +792,8 @@
             "type": "wall"
         },
         "18;10": {
-            "IRID": 4,
-            "img": "PlanetFloor1",
+            "IRID": 1,
+            "img": "PlanetFloor3",
             "pos": [
                 18,
                 10
@@ -926,6 +971,33 @@
             ],
             "type": "wall"
         },
+        "20;10": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                20,
+                10
+            ],
+            "type": "wall"
+        },
+        "20;11": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                20,
+                11
+            ],
+            "type": "wall"
+        },
+        "20;12": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                20,
+                12
+            ],
+            "type": "wall"
+        },
         "20;14": {
             "IRID": 0,
             "img": "SpaceTile1",
@@ -935,12 +1007,129 @@
             ],
             "type": "wall"
         },
+        "20;5": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                20,
+                5
+            ],
+            "type": "wall"
+        },
+        "20;6": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                20,
+                6
+            ],
+            "type": "wall"
+        },
+        "20;7": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                20,
+                7
+            ],
+            "type": "wall"
+        },
+        "20;8": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                20,
+                8
+            ],
+            "type": "wall"
+        },
+        "20;9": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                20,
+                9
+            ],
+            "type": "wall"
+        },
+        "21;10": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                21,
+                10
+            ],
+            "type": "wall"
+        },
+        "21;11": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                21,
+                11
+            ],
+            "type": "wall"
+        },
+        "21;12": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                21,
+                12
+            ],
+            "type": "wall"
+        },
         "21;15": {
             "IRID": 0,
             "img": "SpaceTile1",
             "pos": [
                 21,
                 15
+            ],
+            "type": "wall"
+        },
+        "21;5": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                21,
+                5
+            ],
+            "type": "wall"
+        },
+        "21;6": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                21,
+                6
+            ],
+            "type": "wall"
+        },
+        "21;7": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                21,
+                7
+            ],
+            "type": "wall"
+        },
+        "21;8": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                21,
+                8
+            ],
+            "type": "wall"
+        },
+        "21;9": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                21,
+                9
             ],
             "type": "wall"
         },
@@ -968,6 +1157,33 @@
             "pos": [
                 24,
                 14
+            ],
+            "type": "wall"
+        },
+        "3;10": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                3,
+                10
+            ],
+            "type": "wall"
+        },
+        "3;11": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                3,
+                11
+            ],
+            "type": "wall"
+        },
+        "3;12": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                3,
+                12
             ],
             "type": "wall"
         },
@@ -1016,6 +1232,42 @@
             ],
             "type": "wall"
         },
+        "3;9": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                3,
+                9
+            ],
+            "type": "wall"
+        },
+        "4;10": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                4,
+                10
+            ],
+            "type": "wall"
+        },
+        "4;11": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                4,
+                11
+            ],
+            "type": "wall"
+        },
+        "4;12": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                4,
+                12
+            ],
+            "type": "wall"
+        },
         "4;3": {
             "IRID": 0,
             "img": "SpaceTileSide2",
@@ -1061,6 +1313,15 @@
             ],
             "type": "wall"
         },
+        "4;9": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                4,
+                9
+            ],
+            "type": "wall"
+        },
         "5;10": {
             "IRID": 4,
             "img": "PlanetFloor3",
@@ -1076,6 +1337,15 @@
             "pos": [
                 5,
                 11
+            ],
+            "type": "wall"
+        },
+        "5;12": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                5,
+                12
             ],
             "type": "wall"
         },
@@ -1148,6 +1418,15 @@
             "pos": [
                 6,
                 11
+            ],
+            "type": "wall"
+        },
+        "6;12": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                6,
+                12
             ],
             "type": "wall"
         },
@@ -1232,6 +1511,15 @@
             ],
             "type": "wall"
         },
+        "7;12": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                7,
+                12
+            ],
+            "type": "wall"
+        },
         "7;3": {
             "IRID": 0,
             "img": "SpaceTileCorner4",
@@ -1313,6 +1601,15 @@
             ],
             "type": "wall"
         },
+        "8;12": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                8,
+                12
+            ],
+            "type": "wall"
+        },
         "8;4": {
             "IRID": 1,
             "img": "PlanetFloor3",
@@ -1382,6 +1679,15 @@
             "pos": [
                 9,
                 11
+            ],
+            "type": "wall"
+        },
+        "9;12": {
+            "IRID": 1,
+            "img": "PlanetFloor3",
+            "pos": [
+                9,
+                12
             ],
             "type": "wall"
         },

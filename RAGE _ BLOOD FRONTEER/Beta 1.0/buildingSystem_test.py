@@ -1,4 +1,4 @@
-import codes.MAP as M
+import code.MAP as M
 import pygame
 
 

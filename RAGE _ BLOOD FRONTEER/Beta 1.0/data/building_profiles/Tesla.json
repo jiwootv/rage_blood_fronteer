@@ -1,0 +1,25 @@
+{
+  "building.name" : "뇌전탑",
+  "building.level" : "1-3",
+  "building.lore" : "플라즈마 전기를 발사하는 타워입니다. 통구이가 되지 않게 조심하세요!",
+  "building.type" : "defence",
+  "building.size" : "2x2",
+  "building.hp" : [200, 400, 800],
+
+  "building.upgrade.cost" : ["{'notianium':1200}", "{'notianium':2000}", "{'notianium':2400}"],
+  "building.upgrade.time" : ["5", "30", "1800"],
+
+  "building.image.animation" : ["대충 개쩌는 이미지 리스트가 들어갈 예정"],
+
+  "building.defend.distance" : 20,
+  "building.defend.attack.damage" : [2, 3, 1972],
+  "building.defend.attack.cycle" : 20,
+  "building.defend.attack.type" : "electronic_onetarget|DOT|[20,40,100,200,1000,1500]/[0.25,0.25,0.25,0.25,0.25,0.25]",
+  "comment_defend.attack.type" : "onetarget(DD), (DOT), (AOE) 광역공격(Aoe or Range attack) ",
+
+  "building.produce.resource": "notanium",
+  "building.produce.efficiency": "20s",
+  "building.produce.max_have": 20000,
+
+  "comment1" : "범위공격, 공격주기"
+}

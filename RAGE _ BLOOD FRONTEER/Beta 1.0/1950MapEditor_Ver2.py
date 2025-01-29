@@ -63,7 +63,7 @@ class Main:
         self.tile_size = 60
         self.map_max = 30
 
-        self.Map_c = GameMap.Map(self.screen, pygame_in_game=pygame)
+        self.Map_c = GameMap.Map(self.screen, pygame_in_game=pygame, mode="Edit")
         self.file_index = 1
         self.select_IRID = 0
         self.mouserect = 0
@@ -265,8 +265,8 @@ class Main:
 
         x, y = self.Map_c.moveposGet()  # 맵의 이동 좌표 얻기
         x1, y1 = pygame.mouse.get_pos()  # 마우스 좌표얻기
-        self.pos_x, self.pos_y = (x * -1 + x1) // self.tile_size, (
-                y * -1 + y1) // self.tile_size  # 그걸 Tile size로 나누어 커서가 위치한 pos 계산
+        self.pos_x, self.pos_y = int((x * -1 + x1) // self.tile_size), int((
+                y * -1 + y1) // self.tile_size)  # 그걸 Tile size로 나누어 커서가 위치한 pos 계산
 
         # print(self.now_map[self.file_index - 1]["tilemap"][f"{self.pos_x};{self.pos_y}"])
         # print(self.pos_x, self.pos_y)  # 그 pos 출력
@@ -410,14 +410,15 @@ class Main:
             self.draw_preview()
 
             self.Map_c.draw()
-            self.Map_c.event()
+
+            delta_time = self.clock.tick(60) / 1000.0  # 1초당 프레임 (60FPS), delta_time은 초 단위
+            self.Map_c.event(delta_time)
 
             self.lines()
             self.draw_hider()
             self.event()
             self.text(30, "현재 맵 파일 번호: %d" % int(self.file_index), (255, 255, 255), 500, 600)
             self.text(30, a, (255, 255, 255), 600, 550)
-            self.text(30, "현재 IRID: %d" % self.select_IRID, (255, 255, 255), 600, 500)
             self.text(30, "현재 좌표: %d;%d" % (self.pos_x + 1, self.pos_y + 1), (255, 255, 255), 300, 500)
             try:
                 self.text(30,
@@ -442,8 +443,6 @@ class Main:
                     pygame.transform.scale(self.Map_c.assets[self.tile_name_list[self.select_tileType]], (40, 40)),
                     (750, 40))
             pygame.display.update()
-
-            self.clock.tick(60)
 
             # Tkinter 이벤트 처리 (화면 업데이트 및 이벤트 처리)
             self.root.update_idletasks()
@@ -598,10 +597,11 @@ class OptionTopLevel:
         )
         self.button_apply.grid(row=self.row, column=0, columnspan=2)
 
-        if now_map[f"room{file_index}.json"]["tilemap"][f"{x};{y}"].get("event"):
-            for event in now_map[f"room{file_index}.json"]["tilemap"][f"{x};{y}"]["event"]:
-                if event["type"] == "room_move":
-                    add_label_and_dropdown("방 이동", event["room"])
+        if now_map[f"room{file_index}.json"]["tilemap"].get(f"{x};{y}"):
+            if now_map[f"room{file_index}.json"]["tilemap"][f"{x};{y}"].get("event"):
+                for event in now_map[f"room{file_index}.json"]["tilemap"][f"{x};{y}"]["event"]:
+                    if event["type"] == "room_move":
+                        add_label_and_dropdown("방 이동", event["room"])
 
     def on_combobox_change(self, event):
         combobox = event.widget

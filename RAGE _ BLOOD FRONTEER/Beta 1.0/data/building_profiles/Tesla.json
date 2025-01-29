@@ -6,7 +6,7 @@
   "building.size" : "2x2",
   "building.hp" : [200, 400, 800],
 
-  "building.upgrade.cost" : ["{'notianium':1200}", "{'notianium':2000}", "{'notianium':2400}"],
+  "building.upgrade.cost" : [{"notianium":1200}, {"notianium":2000}, {"notianium":2400}],
   "building.upgrade.time" : ["5", "30", "1800"],
 
   "building.image.animation" : ["대충 개쩌는 이미지 리스트가 들어갈 예정"],

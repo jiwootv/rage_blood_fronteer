@@ -116,10 +116,13 @@ class Game:
         self.name_no_button = SimpleButton(350, 280, 150, 60, (255, 255, 255), text="아니요", font=font)
         self.is_say_bad_word = False
 
+        self.delta_time = 0
+
         pygame.display.set_caption("RAGE: BLOOD FRONTEER")
 
     def run(self):
         while True:
+            self.delta_time = self.clock.tick(60) / 1000.0  # 1초당 프레임 (60FPS), delta_time은 초 단위
             self.now_time = pygame.time.get_ticks()
             events = pygame.event.get()  # 이벤트를 한 번만 가져옴
 
@@ -148,18 +151,20 @@ class Game:
                     self.now_screen = 3
                     self.Map_c.load_to_list(self.Map_c.mapGet(1))
                     self.Map_c.draw_set()
-                    self.Map_c.brickPassSet(1)
             if self.now_screen == 3:
                 self.main_screen(events)
             pygame.display.update()
             self.screen.fill(0)
-            self.clock.tick(60)
 
     def main_screen(self, events):
-        self.Map_c.draw()
-        self.Map_c.event()
-
-        self.gbar.gui_set()
+        if version == 1:
+            self.Map_c.draw()
+            self.Map_c.event()
+            self.gbar.gui_set()
+        elif version == 2:
+            self.Map_c.draw()
+            self.Map_c.event(self.delta_time)
+            self.gbar.gui_set()
 
     def say_your_name(self, screen, events):
         text = "당신의 이름은 무엇입니까?"

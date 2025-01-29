@@ -23,7 +23,7 @@ class Map:
         :param screen: pygame의 스크린
         :param map_dir: 맵 위치
         :param pygame_in_game: pygame 객체 (기본값 None)
-        :param mode: "Play" or "Edit"
+        :param mode: "Play" or "Edit" (기본값 "Play")
         """
 
         if pygame_in_game is not None:
@@ -58,7 +58,12 @@ class Map:
 
         self.tile_list = []
         self.move_pos = [0, 0]
-        self.move_speed = 5
+
+        self.mode = mode
+        if self.mode == "Play":
+            self.move_speed = 200
+        else:
+            self.move_speed = 350
 
         # map 설정
         self.map = {}
@@ -93,8 +98,10 @@ class Map:
         """
         draw를 하기에 앞써서 쓰는 코드로 추정
         """
-        # self.move_pos를 self.map[1]["startpos"] (0, -1) 에 30을 곱해 넣습니다. (0, -30)
-        self.move_pos = list(map(lambda x: x * 30, self.map["room1.json"]["startpos"]))
+        if self.mode == "Play":
+            self.move_pos = self.map["room1.json"]["startpos"]
+        else:
+            self.move_pos = [0, 0]
 
         # 모든 assets의 키들 돌아가면서
         # 키가 "Player"로 시작하지 않으면
@@ -104,31 +111,40 @@ class Map:
             print(r[:6])
             if r[:6] != "Player":
                 self.assets[r] = pygame.transform.scale(self.assets[r], (self.tilesize, self.tilesize))
-
-    def var_set(self, type, result):
-        """
-        self.type를 result로 정합니다.
-        (왜 만든거임)
-        :param type: 변수
-        :param result: 값
-        """
-        setattr(self, type, result)
+            else:
+                img_w = self.assets[r].get_size()[0]
+                change = self.tilesize / img_w
+                self.assets[r] = pygame.transform.scale(self.assets[r],
+                                                        (self.tilesize, self.assets[r].get_size()[1] * change))
 
     def draw(self):
         """
         그립니다.
         (당연하게도)
         """
-        if len(self.tile_list) != 0:
-            # tile을 draw합니다.
-            for tile in self.tile_list:
-                try:
-                    self.root.blit(self.assets[tile["img"]],
-                                   (tile["pos"][0] * self.tilesize - self.tilesize + self.move_pos[0],
-                                    tile["pos"][1] * self.tilesize - self.tilesize + self.move_pos[1]))
+        if self.mode == "Play":
+            if len(self.tile_list) != 0:
+                # tile을 draw합니다.
+                for tile in self.tile_list:
+                    try:
+                        self.root.blit(self.assets[tile["img"]],
+                                       (tile["pos"][0] * self.tilesize - self.tilesize - (self.move_pos[0] - 4.83) * 60,
+                                        tile["pos"][1] * self.tilesize - self.tilesize - (self.move_pos[1]-3.5) * 60))
 
-                except IndexError:
-                    pass
+                    except IndexError:
+                        pass
+            self.root.blit(self.assets["Player"], (290, 150))
+        else:
+            if len(self.tile_list) != 0:
+                # tile을 draw합니다.
+                for tile in self.tile_list:
+                    try:
+                        self.root.blit(self.assets[tile["img"]],
+                                       (tile["pos"][0] * self.tilesize - self.tilesize + self.move_pos[0],
+                                        tile["pos"][1] * self.tilesize - self.tilesize + self.move_pos[1]))
+
+                    except IndexError:
+                        pass
 
     def mapGet(self, mapNumber):
         """
@@ -147,10 +163,7 @@ class Map:
 
     # def map_dataEdit(self, mapNumber):
 
-    def event(self, events=None):
-        # 충돌 / 이동감지
-        # (이동은 movetile이라는 list를 만들어서 그걸로 이벤트 처리)
-        collides = [0, 0, 0, 0]
+    def event(self, delta_time, events=None):
         movetype = [0, 0, 0, 0]
         keys = pygame.key.get_pressed()
         if keys[pygame.K_w]:
@@ -162,18 +175,30 @@ class Map:
         if keys[pygame.K_a]:
             movetype[3] = 1
 
-        if movetype[0] == 1 and not collides[0]:
-            self.move_pos[1] += self.move_speed
+        if self.mode == "Play":
+            if movetype[0] == 1:  # W
+                self.move_pos[1] -= self.move_speed * delta_time
 
-        if movetype[1] == 1 and not collides[1]:
-            self.move_pos[1] -= self.move_speed
+            if movetype[1] == 1:  # S
+                self.move_pos[1] += self.move_speed * delta_time
 
-        if movetype[2] == 1 and not collides[2]:
-            self.move_pos[0] -= self.move_speed
+            if movetype[2] == 1:  # D
+                self.move_pos[0] += self.move_speed * delta_time
 
-        if movetype[3] == 1 and not collides[3]:
-            self.move_pos[0] += self.move_speed
-        return movetype
+            if movetype[3] == 1:  # A
+                self.move_pos[0] -= self.move_speed * delta_time
+        else:
+            if movetype[0] == 1:
+                self.move_pos[1] += self.move_speed * delta_time
+
+            if movetype[1] == 1:
+                self.move_pos[1] -= self.move_speed * delta_time
+
+            if movetype[2] == 1:
+                self.move_pos[0] -= self.move_speed * delta_time
+
+            if movetype[3] == 1:
+                self.move_pos[0] += self.move_speed * delta_time
 
     def moveposGet(self):
         """

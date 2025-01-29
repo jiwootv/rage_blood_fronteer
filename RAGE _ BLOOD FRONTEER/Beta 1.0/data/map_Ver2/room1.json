@@ -4,8 +4,8 @@
         20
     ],
     "startpos": [
-        0,
-        -1
+        10,
+        10
     ],
     "tilemap": {
         "10;10": {
@@ -1044,6 +1044,15 @@
             ],
             "type": "wall"
         },
+        "5;1": {
+            "event": [],
+            "img": "SpaceTile1",
+            "pos": [
+                5,
+                1
+            ],
+            "type": "floor"
+        },
         "5;10": {
             "IRID": 4,
             "img": "PlanetFloor3",
@@ -1115,6 +1124,15 @@
                 9
             ],
             "type": "wall"
+        },
+        "6;1": {
+            "event": [],
+            "img": "lava",
+            "pos": [
+                6,
+                1
+            ],
+            "type": "floor"
         },
         "6;10": {
             "IRID": 1,
